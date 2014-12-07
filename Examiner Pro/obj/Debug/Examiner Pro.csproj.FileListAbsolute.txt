@@ -1,0 +1,23 @@
+c:\users\tm\documents\visual studio 2012\Projects\Examiner Pro\Examiner Pro\bin\Debug\Examiner Pro.exe.config
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\Examiner Pro.csprojResolveAssemblyReference.cache
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\MainWindow.baml
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\MainWindow.g.cs
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\App.g.cs
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\Examiner Pro_MarkupCompile.cache
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\Examiner Pro.g.resources
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\Examiner_Pro.Properties.Resources.resources
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\Examiner Pro.csproj.GenerateResource.Cache
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\bin\Debug\Examiner Pro.exe
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\bin\Debug\Examiner Pro.pdb
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\Examiner Pro.exe
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\Examiner Pro.pdb
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\WizardDialogBox.baml
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\WizardPage1.baml
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\WizardPage2.baml
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\WizardPage3.baml
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\WizardDialogBox.g.cs
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\WizardPage1.g.cs
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\WizardPage2.g.cs
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\WizardPage3.g.cs
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\Examiner Pro_MarkupCompile.lref
