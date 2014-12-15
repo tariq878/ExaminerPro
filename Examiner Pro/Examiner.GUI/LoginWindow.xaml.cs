@@ -33,12 +33,14 @@ namespace Examiner_Pro.Examiner.GUI
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
+            this.DialogResult = false;
             this.Close();
         }
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
             //We need to perform the login and set the login to true.
+            this.DialogResult = true;
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)

@@ -23,7 +23,7 @@ namespace Examiner_Pro
 
             if (dialog.ShowDialog() == true)
             {
-                var mainWindow = new MainWindow();
+                var mainWindow = new Main();
                 //Re-enable normal shutdown mode.
                 Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
                 Current.MainWindow = mainWindow;

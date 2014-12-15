@@ -28,11 +28,9 @@ R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\bin\Deb
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\bin\Debug\Examiner Pro.pdb
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro.csprojResolveAssemblyReference.cache
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\LoginWindow.baml
-R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\MainWindow.baml
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\MainWindow.baml
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\WizardDialogBox.baml
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\LoginWindow.g.cs
-R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\MainWindow.g.cs
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\MainWindow.g.cs
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\WizardDialogBox.g.cs
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\WizardPage1.g.cs
@@ -50,3 +48,5 @@ R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Deb
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro.csproj.GenerateResource.Cache
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\resource.baml
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\App.baml
+R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Main.baml
+R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Main.g.cs
