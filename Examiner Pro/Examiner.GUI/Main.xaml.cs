@@ -23,5 +23,11 @@ namespace Examiner_Pro.Examiner.GUI
         {
             InitializeComponent();
         }
+
+        private void Menu_NewClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("New");
+        }
+
     }
 }
