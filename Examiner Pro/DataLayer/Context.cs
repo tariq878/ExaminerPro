@@ -16,6 +16,7 @@ namespace Examiner_Pro.DataLayer
             {
 
 
+
             }
             public DbSet<Course> _Courses { get; set; }
         }
