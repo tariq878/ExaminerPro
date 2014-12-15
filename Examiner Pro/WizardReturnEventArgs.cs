@@ -17,6 +17,9 @@ namespace Examiner_Pro
             this.data = data;
         }
 
+
+        //test
+
         public WizardResult Result
         {
             get { return this.result; }

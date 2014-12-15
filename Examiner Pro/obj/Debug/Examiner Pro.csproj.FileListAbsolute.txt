@@ -21,3 +21,6 @@ C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\
 C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\WizardPage3.g.cs
 C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\Examiner Pro\obj\Debug\Examiner Pro_MarkupCompile.lref
+R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\bin\Debug\Examiner Pro.exe.config
+R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro.exe
+R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro.pdb
