@@ -4221,4 +4221,6 @@
         </Setter>
     </Style>
 
+    <BitmapImage x:Key="MyImageSource" UriSource="../Examiner Pro/Media/education_banner.jpg" />
+    
 </ResourceDictionary>

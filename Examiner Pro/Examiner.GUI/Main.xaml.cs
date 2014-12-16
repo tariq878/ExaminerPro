@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Examiner_Pro.Examiner.GUI.Users;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,8 +27,26 @@ namespace Examiner_Pro.Examiner.GUI
 
         private void Menu_NewClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("New");
         }
 
+        #region Users
+        private void Menu_userNew(object sender, RoutedEventArgs e)
+        {
+            UserCreate userForm = new UserCreate();
+            userForm.ShowDialog();
+        }
+        private void Menu_userDelete(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Menu_userReset(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Menu_userChangeRole(object sender, RoutedEventArgs e)
+        {
+
+        }
+        #endregion
     }
 }

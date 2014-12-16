@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Examiner_Pro.DataLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,7 @@ namespace Examiner_Pro.Examiner.GUI
 
         private void Reset_Click(object sender, RoutedEventArgs e)
         {
+            this.errormessage.Text = "";
             textBoxFirstName.Text = "";
             passwordBox1.Clear();
 
@@ -39,13 +41,26 @@ namespace Examiner_Pro.Examiner.GUI
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
+            this.errormessage.Text = "";
             //We need to perform the login and set the login to true.
-            this.DialogResult = true;
+            UserHelper helper = new UserHelper();
+            User user = new User();
+            user.UserName = textBoxFirstName.Text;
+            if(helper.Login(user, passwordBox1.Password))
+            {
+                this.DialogResult = true;
+            }
+            else 
+            {
+                this.errormessage.Text = "Invalid username / password";
+                //this.DialogResult = false;
+            }
+
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-
+           
         }
     }
 }

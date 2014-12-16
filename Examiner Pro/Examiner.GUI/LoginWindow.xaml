@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
        Title="Registration" Height="220" Width="528"  ResizeMode="NoResize" WindowStyle="None" AllowsTransparency ="False">
     <Grid  Height="220" Width="528" >
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,5,0,0" Name="textBlockHeading" Text="Registration:" VerticalAlignment="Top" Width="110"  FontSize="17" FontStretch="ExtraCondensed"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,5,0,0" Name="textBlockHeading" Text="Login:" VerticalAlignment="Top" Width="110"  FontSize="17" FontStretch="ExtraCondensed"/>
         <!--Button as a Link button using style-->
         <Button Margin="200,10,12,288" Content="Login" Cursor="Hand" Click="Login_Click">
             <Button.Template>
@@ -32,15 +32,15 @@
             </Grid.RowDefinitions>
             <TextBlock Height="20" HorizontalAlignment="Left" Margin="67,0,0,0" x:Name ="errormessage" VerticalAlignment="Top" Width="247"  OpacityMask="Crimson" Foreground="#FFE5572C" />
             <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,20,0,0" Name="textBlockFirstname" Text="First Name:" VerticalAlignment="Top" Width="110" />
-            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,40,0,0" Name="textBlockPassword" Text="Password:" VerticalAlignment="Top" Width="110"  />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,50,0,0" Name="textBlockPassword" Text="Password:" VerticalAlignment="Top" Width="110"  />
 
             <TextBox Height="23" HorizontalAlignment="Left" Margin="183,20,0,0" Name="textBoxFirstName" VerticalAlignment="Top" Width="222" />
 
-            <PasswordBox Height="23" HorizontalAlignment="Left" Margin="183,40,0,0" Name="passwordBox1" VerticalAlignment="Top" Width="222" />
+            <PasswordBox Height="23" HorizontalAlignment="Left" Margin="183,50,0,0" Name="passwordBox1" VerticalAlignment="Top" Width="222" />
             <!--For password-->
-            <Button Content="Submit" Height="23" HorizontalAlignment="Left" Margin="183,70,0,0" Name="Submit" VerticalAlignment="Top" Width="70" Click="Submit_Click" />
-            <Button Content="Reset" Height="23" HorizontalAlignment="Left" Margin="259,70,0,0" x:Name="btnReset" VerticalAlignment="Top" Width="70" Click="Reset_Click" />
-            <Button Content="Cancel" Height="23" HorizontalAlignment="Right" Margin="0,70,60,0" x:Name="btnCancel" VerticalAlignment="Top" Width="70" Click="Cancel_Click" />
+            <Button Content="Submit" Height="23" HorizontalAlignment="Left" Margin="183,80,0,0" Name="Submit" VerticalAlignment="Top" Width="70" Click="Submit_Click" />
+            <Button Content="Reset" Height="23" HorizontalAlignment="Left" Margin="259,80,0,0" x:Name="btnReset" VerticalAlignment="Top" Width="70" Click="Reset_Click" />
+            <Button Content="Cancel" Height="23" HorizontalAlignment="Right" Margin="0,80,60,0" x:Name="btnCancel" VerticalAlignment="Top" Width="70" Click="Cancel_Click" />
         </Grid>
     </Grid>
 </Window>

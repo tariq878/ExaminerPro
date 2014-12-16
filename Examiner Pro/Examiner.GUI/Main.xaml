@@ -14,10 +14,14 @@
                     <Separator/>
                     <MenuItem Header="_Exit"/>
                 </MenuItem>
+                <MenuItem Header="_Users">
+                    <MenuItem Header="_Create Users" Click="Menu_userNew"/>
+                    <MenuItem Header="_Delete Users" Click="Menu_userDelete"/>
+                    <MenuItem Header="_Reset Password" Click="Menu_userReset"/>
+                    <MenuItem Header="C_hange Role" Click="Menu_userChangeRole"/>
+                </MenuItem>
                 <MenuItem Header="_Settings">
                     <MenuItem Header="_Options"/>
-                    <MenuItem Header="_Close"/>
-                    <MenuItem Header="_Save"/>
                 </MenuItem>
             </Menu>
             

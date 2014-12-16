@@ -1,4 +1,5 @@
 ﻿using Examiner_Pro.Examiner.GUI;
+using Examiner_Pro.Examiner;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -6,6 +7,8 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Examiner_Pro.DataLayer;
+using Examiner_Pro.Utils;
 
 namespace Examiner_Pro
 {
@@ -21,6 +24,7 @@ namespace Examiner_Pro
 
             var dialog = new LoginWindow();
 
+            
             if (dialog.ShowDialog() == true)
             {
                 var mainWindow = new Main();
