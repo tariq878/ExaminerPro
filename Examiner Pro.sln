@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio Express 2012 for Windows Desktop
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examiner Pro", "Examiner Pro\Examiner Pro.csproj", "{AAF87E56-7829-444D-BFA2-5CA535E6995E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExaminerProLib", "ExaminerProLib\ExaminerProLib.csproj", "{068584A9-8364-4611-8E68-C28DD4D8B3EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +15,10 @@ Global
 		{AAF87E56-7829-444D-BFA2-5CA535E6995E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAF87E56-7829-444D-BFA2-5CA535E6995E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAF87E56-7829-444D-BFA2-5CA535E6995E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{068584A9-8364-4611-8E68-C28DD4D8B3EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{068584A9-8364-4611-8E68-C28DD4D8B3EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{068584A9-8364-4611-8E68-C28DD4D8B3EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{068584A9-8364-4611-8E68-C28DD4D8B3EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

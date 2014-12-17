@@ -54,11 +54,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DataLayer\Course.cs" />
-    <Compile Include="DataLayer\DatabaseController.cs" />
-    <Compile Include="DataLayer\Roles.cs" />
-    <Compile Include="DataLayer\User.cs" />
-    <Compile Include="DataLayer\UserHelper.cs" />
+    <Compile Include="Examiner.GUI\Courses\CreateCourse.xaml.cs">
+      <DependentUpon>CreateCourse.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examiner.GUI\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
@@ -73,7 +71,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
-    <Compile Include="Utils\Security.cs" />
     <Compile Include="WizardData.cs" />
     <Compile Include="WizardDialogBox.xaml.cs">
       <DependentUpon>WizardDialogBox.xaml</DependentUpon>
@@ -91,6 +88,10 @@
     <Compile Include="WizardResult.cs" />
     <Compile Include="WizardReturnEventArgs.cs" />
     <Compile Include="WizardReturnEventHandler.cs" />
+    <Page Include="Examiner.GUI\Courses\CreateCourse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Examiner.GUI\LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -168,7 +169,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ExaminerProLib\ExaminerProLib.csproj">
+      <Project>{068584a9-8364-4611-8e68-c28dd4d8b3ef}</Project>
+      <Name>ExaminerProLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Media\education_banner.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

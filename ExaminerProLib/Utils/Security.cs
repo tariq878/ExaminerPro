@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Examiner_Pro.Utils
 {
-    class Security
+    public class Security
     {
         public static String GetHash(string password)
         {
