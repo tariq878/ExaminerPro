@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Examiner_Pro.Utils
+namespace ExaminerProLib.Utils
 {
     public class Security
     {

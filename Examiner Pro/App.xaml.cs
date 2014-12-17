@@ -7,8 +7,6 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
-using Examiner_Pro.DataLayer;
-using Examiner_Pro.Utils;
 
 namespace Examiner_Pro
 {

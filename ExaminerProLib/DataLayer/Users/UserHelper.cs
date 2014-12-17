@@ -1,4 +1,4 @@
-﻿using Examiner_Pro.Utils;
+﻿using ExaminerProLib.Utils;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Examiner_Pro.DataLayer
+namespace ExaminerProLib.DataLayer.Users
 {
     public class UserHelper
     {

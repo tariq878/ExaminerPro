@@ -1,0 +1,54 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.OleDb;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ExaminerProLib.DataLayer.Binding
+{
+    public class DataBinding
+    {
+        public static DataTable GetSubjects()
+        {
+            try
+            {
+                OleDbCommand oleDbCommand1 = new System.Data.OleDb.OleDbCommand("Select id,subject from  subject", DatabaseController.Instance().Connection);
+                OleDbDataReader reader = oleDbCommand1.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("id", typeof(int));
+                dt.Columns.Add("subect", typeof(string));
+                dt.Load(reader);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+                return null;
+            }
+
+        }
+
+        public static DataTable GetGrades()
+        {
+            try
+            {
+                OleDbCommand oleDbCommand1 = new System.Data.OleDb.OleDbCommand("Select number,description from  grades", DatabaseController.Instance().Connection);
+                OleDbDataReader reader = oleDbCommand1.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("number", typeof(int));
+                dt.Columns.Add("description", typeof(string));
+                dt.Load(reader);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+                return null;
+            }
+
+        }
+
+    }
+}

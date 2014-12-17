@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExaminerProLib.DataLayer.Binding;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,10 @@ namespace Examiner_Pro.Examiner.GUI.Courses
         public CreateCourse()
         {
             InitializeComponent();
+
+            //Bind the comboboxes.
+            //cboGrade = DataBinding.
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

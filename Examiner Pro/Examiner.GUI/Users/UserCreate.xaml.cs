@@ -1,5 +1,5 @@
-﻿using Examiner_Pro.DataLayer;
-using Examiner_Pro.Utils;
+﻿using ExaminerProLib.DataLayer.Users;
+using ExaminerProLib.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;

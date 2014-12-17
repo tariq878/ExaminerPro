@@ -23,8 +23,8 @@
             </Grid.ColumnDefinitions>
             <TextBlock Height="20"  HorizontalAlignment="Left" Margin="67,0,0,0" x:Name ="errormessage" VerticalAlignment="Top" Width="247"  OpacityMask="Crimson" Foreground="#FFE5572C" />
             <TextBox Grid.Row="1" Grid.Column="1" Name="txtCourseName" Margin="3,3,3,3"></TextBox>
-            <ComboBox Grid.Row="2" Grid.Column="1" Name="txtSubject" Margin="3,3,3,3"></ComboBox>
-            <ComboBox Grid.Row="3" Grid.Column="1" Name="txtGrade" Margin="3,3,3,3"></ComboBox>
+            <ComboBox Grid.Row="2" Grid.Column="1" Name="cboSubject" Margin="3,3,3,3"></ComboBox>
+            <ComboBox Grid.Row="3" Grid.Column="1" Name="cboGrade" Margin="3,3,3,3"></ComboBox>
             <PasswordBox Grid.Row="4" Grid.Column="1" Name="txtNumQuestions" Margin="3,3,3,3"></PasswordBox>
             <Button Grid.Row="5" Grid.Column="0" Margin="3,3,3,3" Width="80" Content="Cancel" HorizontalAlignment="Right" Click="Button_Click_1"></Button>
             <Button Grid.Row="5" Grid.Column="1" Margin="3,3,3,3" Width="80" Content="Create" HorizontalAlignment="Left" Click="Button_Click"></Button>

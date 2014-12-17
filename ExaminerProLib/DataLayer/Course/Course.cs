@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Examiner_Pro.DataLayer
+namespace ExaminerProLib.DataLayer.Course
 {
     public class Course
     {
