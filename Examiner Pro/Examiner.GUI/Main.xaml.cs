@@ -1,4 +1,5 @@
-﻿using Examiner_Pro.Examiner.GUI.Users;
+﻿using Examiner_Pro.Examiner.GUI.Exams;
+using Examiner_Pro.Examiner.GUI.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,9 +26,14 @@ namespace Examiner_Pro.Examiner.GUI
             InitializeComponent();
         }
 
+        #region Exams
         private void Menu_NewClick(object sender, RoutedEventArgs e)
         {
+            CreateCourse userForm = new CreateCourse();
+            userForm.ShowDialog();
         }
+        #endregion
+
 
         #region Users
         private void Menu_userNew(object sender, RoutedEventArgs e)

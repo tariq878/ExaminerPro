@@ -50,5 +50,44 @@ namespace ExaminerProLib.DataLayer.Binding
 
         }
 
+
+        public static DataTable GetQuestionTypes()
+        {
+            try
+            {
+                OleDbCommand oleDbCommand1 = new System.Data.OleDb.OleDbCommand("Select number,type from  questiontype", DatabaseController.Instance().Connection);
+                OleDbDataReader reader = oleDbCommand1.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("number", typeof(int));
+                dt.Columns.Add("type", typeof(string));
+                dt.Load(reader);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+                return null;
+            }
+
+        }
+
+        public static DataTable GetQuestionNumbers()
+        {
+            try
+            {
+                OleDbCommand oleDbCommand1 = new System.Data.OleDb.OleDbCommand("Select number,question from  numberofquestions", DatabaseController.Instance().Connection);
+                OleDbDataReader reader = oleDbCommand1.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("number", typeof(int));
+                dt.Columns.Add("question", typeof(string));
+                dt.Load(reader);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+                return null;
+            }
+        }
     }
 }

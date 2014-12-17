@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\App.xaml
-101363110490
+7-1139774987
 1-949578236
-19-719016606
-14-1081731396
-Examiner.GUI\Courses\CreateCourse.xaml;Examiner.GUI\LoginWindow.xaml;Examiner.GUI\Main.xaml;Examiner.GUI\Users\UserCreate.xaml;resource.xaml;MainWindow.xaml;WizardDialogBox.xaml;WizardPage1.xaml;WizardPage2.xaml;WizardPage3.xaml;
+11-1273117929
+15-757572192
+Examiner.GUI\Exams\AddWizard\AddQuestionWizard.xaml;Examiner.GUI\Exams\CreateExam.xaml;Examiner.GUI\Exams\ExamQuestions.xaml;Examiner.GUI\LoginWindow.xaml;Examiner.GUI\Main.xaml;Examiner.GUI\Users\UserCreate.xaml;resource.xaml;
 
 False
 

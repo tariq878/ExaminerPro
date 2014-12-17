@@ -23,9 +23,12 @@ namespace Examiner_Pro.Examiner.GUI
         public LoginWindow()
         {
             InitializeComponent();
+
+            textBoxFirstName.Text = "admin";
+           passwordBox1.Password="admin";
         }
 
-        private void Reset_Click(object sender, RoutedEventArgs e)
+        private void ClearContent()
         {
             this.errormessage.Text = "";
             textBoxFirstName.Text = "";
@@ -33,13 +36,13 @@ namespace Examiner_Pro.Examiner.GUI
 
         }
 
-        private void Cancel_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             this.DialogResult = false;
             this.Close();
         }
 
-        private void Submit_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.errormessage.Text = "";
             //We need to perform the login and set the login to true.
@@ -61,6 +64,20 @@ namespace Examiner_Pro.Examiner.GUI
         private void Login_Click(object sender, RoutedEventArgs e)
         {
            
+        }
+
+        private void passwordBox1_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            Boolean Capslock = Console.CapsLock;
+            if (Capslock == true)
+            {
+                PopupTextBlock.Text = "Caps Lock is On.";
+                txtPasswordPopup.IsOpen = true;
+            }
+            else
+            {
+                txtPasswordPopup.IsOpen = false;
+            }
         }
     }
 }
