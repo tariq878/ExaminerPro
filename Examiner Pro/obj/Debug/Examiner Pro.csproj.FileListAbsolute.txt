@@ -54,3 +54,36 @@ R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Deb
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\bin\Debug\AvalonWizard.dll
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\bin\Debug\AvalonWizard.pdb
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\bin\Debug\AvalonWizard.xml
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\bin\Debug\Media\education_banner.jpg
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\bin\Debug\Examiner Pro.exe.config
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\bin\Debug\Examiner Pro.exe
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\bin\Debug\Examiner Pro.pdb
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\bin\Debug\AvalonWizard.dll
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\bin\Debug\ExaminerProLib.dll
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\bin\Debug\ExaminerProLib.pdb
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\bin\Debug\AvalonWizard.pdb
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\bin\Debug\AvalonWizard.xml
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro.csprojResolveAssemblyReference.cache
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\AddWizard\AddQuestionWizard.baml
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\CreateExam.baml
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\ExamQuestions.baml
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\LoginWindow.baml
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Main.baml
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Users\UserCreate.baml
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\resource.baml
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\App.baml
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\AddWizard\AddQuestionWizard.g.cs
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\CreateExam.g.cs
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\ExamQuestions.g.cs
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\LoginWindow.g.cs
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Main.g.cs
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Users\UserCreate.g.cs
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\App.g.cs
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro_Content.g.cs
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro_MarkupCompile.cache
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro.g.resources
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner_Pro.Properties.Resources.resources
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner_Pro.Resource1.resources
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro.csproj.GenerateResource.Cache
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro.exe
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro.pdb

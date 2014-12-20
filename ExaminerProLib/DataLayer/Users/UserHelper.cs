@@ -21,7 +21,7 @@ namespace ExaminerProLib.DataLayer.Users
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.StackTrace);
+                Log.Instance.LogException(ex);
                 return false;
             }
 
@@ -42,7 +42,7 @@ namespace ExaminerProLib.DataLayer.Users
 
                 if (myDataSet.Tables["users"].Rows.Count < 1)
                 {
-                    Console.WriteLine("user not found in database " + user.UserName);
+                    Log.Instance.CreateEntry("user not found in database " + user.UserName);
                     return null;
                 }
 
@@ -55,7 +55,7 @@ namespace ExaminerProLib.DataLayer.Users
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.StackTrace);
+                Log.Instance.LogException(ex);
                 return null;
             }
 
@@ -83,7 +83,7 @@ namespace ExaminerProLib.DataLayer.Users
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.StackTrace);
+                Log.Instance.LogException(ex);
                 return false;
             }
 
@@ -127,7 +127,7 @@ namespace ExaminerProLib.DataLayer.Users
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.StackTrace);
+                Log.Instance.LogException(ex);
                 return false;
             }
         }

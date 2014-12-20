@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExaminerProLib.Utils;
+using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
 using System.IO;
@@ -64,7 +65,7 @@ namespace ExaminerProLib.DataLayer
 
             if (dirs.Length != 1)
             {
-                Console.WriteLine("Database file could not be found. please check if it exisis");
+                Log.Instance.CreateEntry("Database file could not be found. please check if it exisis");
                 return null;
             }
 
@@ -80,7 +81,7 @@ namespace ExaminerProLib.DataLayer
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.StackTrace);
+                Log.Instance.LogException(ex);
                 return false;
             }
 

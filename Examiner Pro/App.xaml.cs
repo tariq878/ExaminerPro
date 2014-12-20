@@ -7,6 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using ExaminerProLib.Utils;
 
 namespace Examiner_Pro
 {
@@ -17,6 +18,8 @@ namespace Examiner_Pro
     {
         public  void ApplicationStart(object sender, StartupEventArgs e)
         {
+            Log.Instance.CreateEntry("----------------------------------------------");
+            Log.Instance.CreateEntry("Application Starting.");
             //Disable shutdown when the dialog closes
             Current.ShutdownMode = ShutdownMode.OnExplicitShutdown;
 
@@ -25,6 +28,7 @@ namespace Examiner_Pro
             
             if (dialog.ShowDialog() == true)
             {
+                Log.Instance.CreateEntry("User Logged In.");
                 var mainWindow = new Main();
                 //Re-enable normal shutdown mode.
                 Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
@@ -33,7 +37,7 @@ namespace Examiner_Pro
             }
             else
             {
-                MessageBox.Show("Unable to load data.", "Error", MessageBoxButton.OK);
+                Log.Instance.CreateEntry("Cancel pressed on login window. Exiting program.");
                 Current.Shutdown(-1);
             }
         }

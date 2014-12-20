@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExaminerProLib.Utils;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
@@ -24,7 +25,7 @@ namespace ExaminerProLib.DataLayer.Binding
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.StackTrace);
+                Log.Instance.LogException(ex);
                 return null;
             }
 
@@ -44,7 +45,7 @@ namespace ExaminerProLib.DataLayer.Binding
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.StackTrace);
+                Log.Instance.LogException(ex);
                 return null;
             }
 
@@ -65,7 +66,7 @@ namespace ExaminerProLib.DataLayer.Binding
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.StackTrace);
+                Log.Instance.LogException(ex);
                 return null;
             }
 
@@ -85,7 +86,7 @@ namespace ExaminerProLib.DataLayer.Binding
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.StackTrace);
+                Log.Instance.LogException(ex);
                 return null;
             }
         }

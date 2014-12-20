@@ -66,6 +66,7 @@
     <Compile Include="Examiner.GUI\Exams\ExamQuestions.xaml.cs">
       <DependentUpon>ExamQuestions.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examiner.GUI\Log.cs" />
     <Compile Include="Examiner.GUI\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
