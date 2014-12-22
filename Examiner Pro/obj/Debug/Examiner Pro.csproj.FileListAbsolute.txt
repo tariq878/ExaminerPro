@@ -87,3 +87,7 @@ C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Exami
 C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro.csproj.GenerateResource.Cache
 C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro.exe
 C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro.pdb
+R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\AddWizard\AddQuestion1.baml
+R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\AddWizard\AddQuestion1.g.cs
+R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\AddWizard\AddQuestion2.baml
+R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\AddWizard\AddQuestion2.g.cs

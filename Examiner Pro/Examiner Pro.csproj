@@ -57,9 +57,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Examiner.GUI\Exams\AddWizard\AddQuestion1.xaml.cs">
+      <DependentUpon>AddQuestion1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examiner.GUI\Exams\AddWizard\AddQuestion2.xaml.cs">
+      <DependentUpon>AddQuestion2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examiner.GUI\Exams\AddWizard\AddQuestionWizard.xaml.cs">
       <DependentUpon>AddQuestionWizard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examiner.GUI\Exams\AddWizard\QuestionData.cs" />
     <Compile Include="Examiner.GUI\Exams\CreateExam.xaml.cs">
       <DependentUpon>CreateExam.xaml</DependentUpon>
     </Compile>
@@ -81,6 +88,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
+    <Page Include="Examiner.GUI\Exams\AddWizard\AddQuestion1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Examiner.GUI\Exams\AddWizard\AddQuestion2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Examiner.GUI\Exams\AddWizard\AddQuestionWizard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

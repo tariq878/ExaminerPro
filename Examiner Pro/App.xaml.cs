@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using ExaminerProLib.Utils;
+using Examiner_Pro.Examiner.GUI.Exams.AddWizard;
 
 namespace Examiner_Pro
 {
@@ -23,8 +24,8 @@ namespace Examiner_Pro
             //Disable shutdown when the dialog closes
             Current.ShutdownMode = ShutdownMode.OnExplicitShutdown;
 
-            var dialog = new LoginWindow();
-
+            //var dialog = new LoginWindow();
+            AddQuestion1 dialog = new AddQuestion1();
             
             if (dialog.ShowDialog() == true)
             {

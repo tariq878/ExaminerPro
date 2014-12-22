@@ -24,7 +24,8 @@
                                 <ColumnDefinition Width="30*"/>
                                 <ColumnDefinition Width="70*"/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Height="20"  HorizontalAlignment="Left" Margin="67,0,0,0" x:Name ="errormessage" VerticalAlignment="Top" Width="247"  OpacityMask="Crimson" Foreground="#FFE5572C" />
+                            <TextBlock Text ="Add new quetion:" Height="20"  HorizontalAlignment="Left" Margin="3,3,3,3" x:Name ="title" VerticalAlignment="Top" Width="247"  OpacityMask="Azure" Foreground="BlueViolet" FontWeight="Bold" FontSize="14" FontFamily="Calibri Light" />
+                            <TextBlock Height="20"  HorizontalAlignment="Left" Margin="3,3,3,3" x:Name ="errormessage" VerticalAlignment="Top" Width="247"  OpacityMask="Crimson" Foreground="#FFE5572C" />
                             <ComboBox Name="cboQuestionType" Grid.Row="1" Grid.Column="1" Margin="3,3,3,3" SelectionChanged="cboQuestionType_SelectionChanged"></ComboBox>
                             <ComboBox Name="cboNumChoices" Grid.Row="2" Grid.Column="1" Margin="3,3,3,3" Visibility="Hidden"></ComboBox>
                          
