@@ -148,7 +148,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
                 //Add text box.
                 TextBox txtBox = new TextBox();
                 txtBox.Margin = new Thickness(3, 3, 3, 3);
-                txtBox.Text = " aksjdlasjdlasjdlkajslkddjasljdlkasjldkjaslkjdalk";
+                txtBox.Text = "";
                 Grid.SetRow(txtBox, i);
                 Grid.SetColumn(txtBox, 1);
                 gridContent.Children.Add(txtBox);
@@ -164,7 +164,126 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
 
         private void Button_Next_Click(object sender, RoutedEventArgs e)
         {
+            errormessage.Text = "";
 
+            //Validate the fields.
+            if (ValidateInputs())
+            {
+
+
+            }
+        }
+
+        private bool ValidateInputs()
+        {
+            String error = "";
+            bool answermentioned = false;
+            bool allselected = true;
+            switch (_qdata.Type)
+            {
+                case QuestionType.MCQ: //Multiple choice quesitons
+                   
+                    foreach (var elements in gridContent.Children)
+                    {
+                        if (elements.GetType() == new TextBox().GetType())
+                        {
+                            TextBox text = (TextBox) elements;
+                            if (text.Text.Length < 1)
+                                allselected = false;
+
+                        }
+                        else if (elements.GetType() == new RadioButton().GetType())
+                        {
+                            RadioButton rdo = (RadioButton) elements;
+                            if (rdo.IsChecked==true)
+                                answermentioned = true;
+
+                        }
+
+                        if (!answermentioned)
+                            error += "Please select correct answer.";
+                        if(allselected == true)
+                            error += "Please enter all the values.";
+
+                    }
+                    if (error.Length > 0)
+                    {
+                        errormessage.Text = error;
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                case QuestionType.Multiple: //Multiple selectable quesitons
+                    foreach (var elements in gridContent.Children)
+                    {
+                        if (elements.GetType() == new TextBox().GetType())
+                        {
+                            TextBox text = (TextBox) elements;
+                            if (text.Text.Length < 1)
+                                allselected = false;
+
+                        }
+                        else if (elements.GetType() == new CheckBox().GetType())
+                        {
+                            CheckBox rdo = (CheckBox)elements;
+                            if (rdo.IsChecked==true)
+                                answermentioned = true;
+
+                        }
+
+                        if (!answermentioned)
+                            error += "Please select correct answer.";
+                        if(allselected == true)
+                            error += "Please enter all the values.";
+
+                    }
+                    if (error.Length > 0)
+                    {
+                        errormessage.Text = error;
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                case QuestionType.TF: //True False
+                    foreach (var elements in gridContent.Children)
+                    {
+                        if (elements.GetType() == new TextBox().GetType())
+                        {
+                            TextBox text = (TextBox) elements;
+                            if (text.Text.Length < 1)
+                                allselected = false;
+
+                        }
+                        else if (elements.GetType() == new RadioButton().GetType())
+                        {
+                            RadioButton rdo = (RadioButton) elements;
+                            if (rdo.IsChecked==true)
+                                answermentioned = true;
+
+                        }
+
+                        if (!answermentioned)
+                            error += "Please select correct answer.";
+                        if(allselected == true)
+                            error += "Please enter all the values.";
+
+                    }
+                    if (error.Length > 0)
+                    {
+                        errormessage.Text = error;
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+            }
+
+            return false;
         }
 
         private void Button_Cancel_Click(object sender, RoutedEventArgs e)

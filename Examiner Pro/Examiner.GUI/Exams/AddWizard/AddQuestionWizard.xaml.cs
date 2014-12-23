@@ -59,7 +59,6 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
             
              String test = e.Page != null ? e.Page.Header.ToString() : "null";
             String EventName = e.RoutedEvent.Name;
-            String ParameterName = "Cancel";
             String ParameterValue = e.Cancel.ToString();
             MessageBox.Show("next Clicked");
         }
