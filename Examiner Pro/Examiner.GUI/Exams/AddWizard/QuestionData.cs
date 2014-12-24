@@ -11,6 +11,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
 
     public class QuestionData
     {
+        int _id = 0;
         QuestionType _type;
         int _numoptions;
 
@@ -38,5 +39,16 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
             }
         }
 
+        public int ID
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+            }
+        }
     }
 }

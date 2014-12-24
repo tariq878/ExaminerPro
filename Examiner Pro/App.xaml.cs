@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using ExaminerProLib.Utils;
 using Examiner_Pro.Examiner.GUI.Exams.AddWizard;
+using Examiner_Pro.Examiner.GUI.Exams;
 
 namespace Examiner_Pro
 {
@@ -25,8 +26,8 @@ namespace Examiner_Pro
             Current.ShutdownMode = ShutdownMode.OnExplicitShutdown;
 
             //var dialog = new LoginWindow();
-            AddQuestion1 dialog = new AddQuestion1();
-            
+            //AddQuestion1 dialog = new AddQuestion1();
+            ExamQuestions dialog = new ExamQuestions();
             if (dialog.ShowDialog() == true)
             {
                 Log.Instance.CreateEntry("User Logged In.");

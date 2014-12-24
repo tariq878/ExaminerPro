@@ -52,7 +52,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
 
         private void Button_Cancel_Click(object sender, RoutedEventArgs e)
         {
-
+            this.DialogResult = false;
         }
 
         private void Button_Next_Click(object sender, RoutedEventArgs e)

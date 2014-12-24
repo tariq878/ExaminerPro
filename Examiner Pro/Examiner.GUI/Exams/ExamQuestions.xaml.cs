@@ -25,10 +25,31 @@ namespace Examiner_Pro.Examiner.GUI.Exams
             InitializeComponent();
         }
 
+
+
+
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            AddQuestionWizard wizard = new AddQuestionWizard();
-            wizard.ShowDialog();
+            if (ValidateFields())
+            {
+                AddQuestion1 q1 = new AddQuestion1();
+
+                if (q1.ShowDialog() == true)
+                {
+                    //Get detials of added questiona and display to the grid.
+
+
+                }
+                else
+                {
+                    MessageBox.Show("User Cancelled the question creation wizard");
+                }
+
+
+            }
+
+            //AddQuestionWizard wizard = new AddQuestionWizard();
+            //wizard.ShowDialog();
 
             /*
             ExamQuestionAddWizard wizard = new ExamQuestionAddWizard();
@@ -41,6 +62,28 @@ namespace Examiner_Pro.Examiner.GUI.Exams
             {
                 MessageBox.Show("Canceled.");
             } */
+        }
+
+        private bool ValidateFields()
+        {
+            errormessage.Text = "";
+            String error = "";
+
+            if (textQuestionProfile.Text.Length < 1)
+            {
+                error += "Please enter a valid profile ID before proceeding";
+            }
+
+            errormessage.Text = error;
+
+            if (errormessage.Text.Length > 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)

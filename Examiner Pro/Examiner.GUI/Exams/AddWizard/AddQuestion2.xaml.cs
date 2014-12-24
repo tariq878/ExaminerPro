@@ -72,7 +72,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
                 //Add text box.
                 TextBox txtBox = new TextBox();
                 txtBox.Margin = new Thickness(3, 3, 3, 3);
-                txtBox.Text = " aksjdlasjdlasjdlkajslkddjasljdlkasjldkjaslkjdalk";
+                txtBox.Text = "";
                 Grid.SetRow(txtBox, i);
                 Grid.SetColumn(txtBox, 1);
                 gridContent.Children.Add(txtBox);
@@ -110,7 +110,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
                 //Add text box.
                 TextBox txtBox = new TextBox();
                 txtBox.Margin = new Thickness(3, 3, 3, 3);
-                txtBox.Text = " aksjdlasjdlasjdlkajslkddjasljdlkasjldkjaslkjdalk";
+                txtBox.Text = "";
                 Grid.SetRow(txtBox, i);
                 Grid.SetColumn(txtBox, 1);
                 gridContent.Children.Add(txtBox);
@@ -169,6 +169,8 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
             //Validate the fields.
             if (ValidateInputs())
             {
+                //All the inputs are valid. lets add question to the database against the question profile.
+
 
 
             }
