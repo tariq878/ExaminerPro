@@ -21,6 +21,14 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
     /// </summary>
     public partial class AddQuestion1 : Window
     {
+        Question _question;
+
+        public Question QuestionG
+        {
+            get { return _question;  }
+            set { _question = value;  }
+        }
+
         public AddQuestion1()
         {
             InitializeComponent();
@@ -37,7 +45,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
             cboNumChoices.DisplayMemberPath = numbers.Columns["question"].ToString();
             cboNumChoices.SelectedValuePath = numbers.Columns["number"].ToString();
 
-
+            _question = new Question();
 
         }
 
@@ -61,12 +69,23 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
             QuestionData data = new QuestionData();
             data.QuestionCount = (cboNumChoices.SelectedValue==null?0:(int)cboNumChoices.SelectedValue);
             data.Type = ( ((int)cboQuestionType.SelectedValue==1) ?QuestionType.MCQ:( ((int)cboQuestionType.SelectedValue==2) ?QuestionType.Multiple:QuestionType.TF));
-
+            _question.Data = data;
             AddQuestion2 step2 = new AddQuestion2(data);
             step2.setData(data);
-            step2.ShowDialog();
+
+            if (step2.ShowDialog() == true)
+            {
+                _question.Questions = step2.Options;
+                this.DialogResult = true;
+            }
+            else
+            {
+                //Dont add the requestion.
+            }
+
         }
 
+     
 
     }
 }

@@ -63,9 +63,6 @@
     <Compile Include="Examiner.GUI\Exams\AddWizard\AddQuestion2.xaml.cs">
       <DependentUpon>AddQuestion2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examiner.GUI\Exams\AddWizard\AddQuestionWizard.xaml.cs">
-      <DependentUpon>AddQuestionWizard.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Examiner.GUI\Exams\AddWizard\Question.cs" />
     <Compile Include="Examiner.GUI\Exams\AddWizard\QuestionData.cs" />
     <Compile Include="Examiner.GUI\Exams\AddWizard\QuestionOption.cs" />
@@ -75,6 +72,7 @@
     <Compile Include="Examiner.GUI\Exams\ExamQuestions.xaml.cs">
       <DependentUpon>ExamQuestions.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examiner.GUI\Exams\QuestionProfile.cs" />
     <Compile Include="Examiner.GUI\Log.cs" />
     <Compile Include="Examiner.GUI\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
@@ -95,10 +93,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Examiner.GUI\Exams\AddWizard\AddQuestion2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Examiner.GUI\Exams\AddWizard\AddQuestionWizard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

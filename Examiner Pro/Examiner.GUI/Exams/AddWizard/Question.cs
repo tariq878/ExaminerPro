@@ -6,21 +6,23 @@ using System.Threading.Tasks;
 
 namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
 {
-    class Question
+    public class Question
     {
-        List<QuestionOption> _questions = new List<QuestionOption>();
+        List<QuestionOption> _options = new List<QuestionOption>();
         QuestionData _data = new QuestionData();
         public List<QuestionOption> Questions
         {
             get
             {
-                return _questions;
+                return _options;
             }
             set
             {
-                _questions = value;
+                _options = value;
             }
         }
+
+
 
         public QuestionData Data
         {

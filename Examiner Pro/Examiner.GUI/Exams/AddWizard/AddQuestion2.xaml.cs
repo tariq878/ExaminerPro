@@ -20,6 +20,20 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
     public partial class AddQuestion2 : Window
     {
         QuestionData _qdata;
+        List<QuestionOption> _options;
+
+        public List<QuestionOption> Options
+        {
+            get
+            {
+                return _options;
+            }
+            set
+            {
+                _options = value;
+            }
+
+        }
 
         public AddQuestion2(QuestionData qdata)
         {
@@ -40,6 +54,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
                     break;
             }
 
+            _options = new List<QuestionOption>();
 
         }
 
@@ -67,7 +82,9 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
                 Grid.SetRow(btnRadio, i);
                 Grid.SetColumn(btnRadio, 0);
                 btnRadio.Margin = new Thickness(3, 3, 3, 3);
+                btnRadio.Name = "rdo" + i.ToString();
                 gridContent.Children.Add(btnRadio);
+               
 
                 //Add text box.
                 TextBox txtBox = new TextBox();
@@ -75,6 +92,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
                 txtBox.Text = "";
                 Grid.SetRow(txtBox, i);
                 Grid.SetColumn(txtBox, 1);
+                txtBox.Name = "txt" + i.ToString();
                 gridContent.Children.Add(txtBox);
 
 
@@ -105,6 +123,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
                 Grid.SetRow(btnRadio, i);
                 Grid.SetColumn(btnRadio, 0);
                 btnRadio.Margin = new Thickness(3, 3, 3, 3);
+                btnRadio.Name = "chk" + i.ToString();
                 gridContent.Children.Add(btnRadio);
 
                 //Add text box.
@@ -113,6 +132,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
                 txtBox.Text = "";
                 Grid.SetRow(txtBox, i);
                 Grid.SetColumn(txtBox, 1);
+                txtBox.Name = "text" + i.ToString() ;
                 gridContent.Children.Add(txtBox);
 
 
@@ -143,6 +163,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
                 Grid.SetRow(btnRadio, i);
                 Grid.SetColumn(btnRadio, 0);
                 btnRadio.Margin = new Thickness(3, 3, 3, 3);
+                btnRadio.Name = "rdo" + i.ToString();
                 gridContent.Children.Add(btnRadio);
 
                 //Add text box.
@@ -151,6 +172,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
                 txtBox.Text = "";
                 Grid.SetRow(txtBox, i);
                 Grid.SetColumn(txtBox, 1);
+                txtBox.Name = "txt" + i.ToString();
                 gridContent.Children.Add(txtBox);
 
 
@@ -170,8 +192,34 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
             if (ValidateInputs())
             {
                 //All the inputs are valid. lets add question to the database against the question profile.
-
-
+                //Popluate question contents.
+                switch (_qdata.Type)
+                {
+                    case QuestionType.MCQ: //Multiple choice quesitons
+                    case QuestionType.TF:  //True false;
+                        for (int i = 0; i < _qdata.QuestionCount; i++)
+                        {
+                            RadioButton btnRadio = (RadioButton)  this.FindName("rdo" + i.ToString());
+                            TextBox txtBox = (TextBox)this.FindName("txt" + i.ToString());
+                            QuestionOption option = new QuestionOption();
+                            option.DisplayText = txtBox.Text;
+                            option.Correct = (btnRadio.IsChecked == true ? true : false);
+                            _options.Add(option);
+                        }
+                        break;                       
+                    case QuestionType.Multiple: //Multiple selectable quesitons
+                        for (int i = 0; i < _qdata.QuestionCount; i++)
+                        {
+                            CheckBox btnRadio = (CheckBox)this.FindName("rdo" + i.ToString());
+                            TextBox txtBox = (TextBox)this.FindName("txt" + i.ToString());
+                            QuestionOption option = new QuestionOption();
+                            option.DisplayText = txtBox.Text;
+                            option.Correct = (btnRadio.IsChecked == true ? true : false);
+                            _options.Add(option);
+                        }
+                        break;  
+                }
+                this.DialogResult = true;
 
             }
         }
@@ -290,7 +338,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
 
         private void Button_Cancel_Click(object sender, RoutedEventArgs e)
         {
-
+            this.DialogResult = false;
         }
 
 

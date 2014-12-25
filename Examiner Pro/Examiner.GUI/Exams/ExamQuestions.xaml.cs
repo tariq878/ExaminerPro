@@ -20,9 +20,15 @@ namespace Examiner_Pro.Examiner.GUI.Exams
     /// </summary>
     public partial class ExamQuestions : Window
     {
+        QuestionProfile _profile = new QuestionProfile();
+
         public ExamQuestions()
         {
             InitializeComponent();
+
+           
+            //lvQuestions.Items.Add(new MyItem { Id = 1, Name = "Davidwroxy" });
+
         }
 
 
@@ -37,8 +43,10 @@ namespace Examiner_Pro.Examiner.GUI.Exams
                 if (q1.ShowDialog() == true)
                 {
                     //Get detials of added questiona and display to the grid.
+                    Question question = q1.QuestionG;
+                    _profile.Questions.Add(question);
 
-
+                    RefreshList();
                 }
                 else
                 {
@@ -62,6 +70,14 @@ namespace Examiner_Pro.Examiner.GUI.Exams
             {
                 MessageBox.Show("Canceled.");
             } */
+        }
+
+        private void RefreshList()
+        {
+            lvQuestions.Items.Clear();
+
+
+
         }
 
         private bool ValidateFields()

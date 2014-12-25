@@ -24,3 +24,4 @@ Thumbs.db
 _ReSharper*/
 [Tt]est[Rr]esult*
 DebugLog.txt
+*.pdb
