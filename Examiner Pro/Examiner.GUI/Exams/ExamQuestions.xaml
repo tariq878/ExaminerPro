@@ -32,14 +32,14 @@
                     <Button Grid.Column="2" Margin="20,3,3,3" HorizontalAlignment="Left" Content="Save" Name="btnSave" ></Button>
                     <Button Grid.Column="2" Margin="3,3,20,3" HorizontalAlignment="Right" Content="Cancel"></Button>
                 </Grid>
-                <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal" Grid.Row="4" HorizontalAlignment="Center">
                     <Button  Margin="3,3,3,3" Width="110" Content="Add Question" HorizontalAlignment="Center" Click="ButtonAdd_Click" Height="24" VerticalAlignment="Bottom"/>
                     <Button  Margin="3,3,3,3" Width="110" Content="Delete Question(s)" HorizontalAlignment="Center" Click="ButtonDelete_Click" Height="24" VerticalAlignment="Bottom"/>
                 </StackPanel>
                 
                 
                 <!-- Titles -->
-                <TextBlock Grid.Row="4"   Margin="3,3,3,3" Text="Questions:" HorizontalAlignment="Left" ></TextBlock>
+                <TextBlock Grid.Row="3" Text ="Questions:" Height="20"  HorizontalAlignment="Left" Margin="3,3,3,3" VerticalAlignment="Top" Width="247"  OpacityMask="Azure" Foreground="BlueViolet" FontWeight="Bold" FontSize="14" FontFamily="Calibri Light" />
                 
                 <!-- Questions Grid -->
                 <Grid Grid.Row="5" >
