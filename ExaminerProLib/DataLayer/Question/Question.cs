@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
+namespace ExaminerProLib.DataLayer.Question
 {
     public class Question
     {
+
         List<QuestionOption> _options = new List<QuestionOption>();
         QuestionData _data = new QuestionData();
         public List<QuestionOption> Questions
@@ -35,6 +36,5 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
                 _data = value;
             }
         }
-
     }
 }

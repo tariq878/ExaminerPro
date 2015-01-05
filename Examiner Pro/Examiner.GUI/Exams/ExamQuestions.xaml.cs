@@ -1,4 +1,5 @@
 ﻿using Examiner_Pro.Examiner.GUI.Exams.AddWizard;
+using ExaminerProLib.DataLayer.Question;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,15 +21,20 @@ namespace Examiner_Pro.Examiner.GUI.Exams
     /// </summary>
     public partial class ExamQuestions : Window
     {
+        public class LvData
+        {
+            public int Id { get; set; }
+            public String tType { get; set; }
+            public int QCount { get; set; }
+        }
+
         QuestionProfile _profile = new QuestionProfile();
 
         public ExamQuestions()
         {
             InitializeComponent();
 
-           
-            //lvQuestions.Items.Add(new MyItem { Id = 1, Name = "Davidwroxy" });
-
+ 
         }
 
 
@@ -56,26 +62,18 @@ namespace Examiner_Pro.Examiner.GUI.Exams
 
             }
 
-            //AddQuestionWizard wizard = new AddQuestionWizard();
-            //wizard.ShowDialog();
-
-            /*
-            ExamQuestionAddWizard wizard = new ExamQuestionAddWizard();
-            bool dialogResult = (bool)wizard.ShowDialog();
-            if (dialogResult)
-            {
-                MessageBox.Show(string.Format("{0}\n{1}\n{2}", wizard.WizardData.DataItem1, wizard.WizardData.DataItem2, wizard.WizardData.DataItem3));
-            }
-            else
-            {
-                MessageBox.Show("Canceled.");
-            } */
         }
 
         private void RefreshList()
         {
             lvQuestions.Items.Clear();
 
+            for (int i = 0; i < _profile.Questions.Count; i++)
+            {
+                Question q = _profile.Questions[i];
+                lvQuestions.Items.Add(new LvData { Id = i , tType = q.Data.Type.ToString() , QCount=q.Questions.Count } );
+
+            }
 
 
         }
@@ -106,5 +104,34 @@ namespace Examiner_Pro.Examiner.GUI.Exams
         {
 
         }
+
+
+        private void ButtonSave_Click(object sender, RoutedEventArgs e)
+        {
+            if (QuestionHelper.QuestionExists(_profile))
+            {
+                MessageBoxResult result = MessageBox.Show("Question already exisits, Overrite", "Qestion already present", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                switch (result)
+                {
+                    case MessageBoxResult.Yes:
+                        break;
+                    default:
+                        return;
+                }
+
+                //Save the Exam Result.
+                if (QuestionHelper.SaveQuestion(_profile))
+                {
+                    MessageBox.Show("The question profile has been saved.");
+                }
+                else
+                {
+                    MessageBox.Show("The question profile could not be saved.");
+                }
+
+            }
+
+        }
+
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ExaminerProLib.DataLayer
 {
-    class DatabaseController
+    public class DatabaseController
     {
         private String connectionString;
         private String OleDBProvider = "Microsoft.ACE.OLEDB.12.0";

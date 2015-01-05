@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
+namespace ExaminerProLib.DataLayer.Question
 {
-
-    public enum QuestionType { MCQ, Multiple, TF};
+    public enum QuestionType { MCQ, Multiple, TF };
 
     public class QuestionData
     {
@@ -23,7 +22,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
             }
             set
             {
-                _type = value; 
+                _type = value;
             }
         }
 
@@ -51,4 +50,5 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
             }
         }
     }
+
 }

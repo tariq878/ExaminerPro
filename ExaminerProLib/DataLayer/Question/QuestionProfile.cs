@@ -1,13 +1,14 @@
-﻿using Examiner_Pro.Examiner.GUI.Exams.AddWizard;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Examiner_Pro.Examiner.GUI.Exams
+namespace ExaminerProLib.DataLayer.Question
 {
-    class QuestionProfile
+    public class QuestionProfile
     {
+
         private int _id;
         private String _profilename;
         private List<Question> _questions = new List<Question>();

@@ -42,6 +42,12 @@
     <Compile Include="DataLayer\Binding\DataBinding.cs" />
     <Compile Include="DataLayer\Course\Course.cs" />
     <Compile Include="DataLayer\DatabaseController.cs" />
+    <Compile Include="DataLayer\Exam\ExamHelper.cs" />
+    <Compile Include="DataLayer\Question\Question.cs" />
+    <Compile Include="DataLayer\Question\QuestionData.cs" />
+    <Compile Include="DataLayer\Question\QuestionHelper.cs" />
+    <Compile Include="DataLayer\Question\QuestionOption.cs" />
+    <Compile Include="DataLayer\Question\QuestionProfile.cs" />
     <Compile Include="DataLayer\Users\Roles.cs" />
     <Compile Include="DataLayer\Users\User.cs" />
     <Compile Include="DataLayer\Users\UserHelper.cs" />

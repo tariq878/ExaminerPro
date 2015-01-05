@@ -63,16 +63,12 @@
     <Compile Include="Examiner.GUI\Exams\AddWizard\AddQuestion2.xaml.cs">
       <DependentUpon>AddQuestion2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examiner.GUI\Exams\AddWizard\Question.cs" />
-    <Compile Include="Examiner.GUI\Exams\AddWizard\QuestionData.cs" />
-    <Compile Include="Examiner.GUI\Exams\AddWizard\QuestionOption.cs" />
     <Compile Include="Examiner.GUI\Exams\CreateExam.xaml.cs">
       <DependentUpon>CreateExam.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examiner.GUI\Exams\ExamQuestions.xaml.cs">
       <DependentUpon>ExamQuestions.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examiner.GUI\Exams\QuestionProfile.cs" />
     <Compile Include="Examiner.GUI\Log.cs" />
     <Compile Include="Examiner.GUI\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
