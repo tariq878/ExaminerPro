@@ -67,12 +67,10 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
         private void Button_Next_Click(object sender, RoutedEventArgs e)
         {
             //Next is clicked, create a dynamic window based on the options provided.
-            QuestionData data = new QuestionData();
-            data.QuestionCount = (cboNumChoices.SelectedValue==null?0:(int)cboNumChoices.SelectedValue);
-            data.Type = ( ((int)cboQuestionType.SelectedValue==1) ?QuestionType.MCQ:( ((int)cboQuestionType.SelectedValue==2) ?QuestionType.Multiple:QuestionType.TF));
-            _question.Data = data;
-            AddQuestion2 step2 = new AddQuestion2(data);
-            step2.setData(data);
+            _question.NumOptions = (cboNumChoices.SelectedValue==null?0:(int)cboNumChoices.SelectedValue);
+            _question.Type = ( ((int)cboQuestionType.SelectedValue==1) ?QuestionType.MCQ:( ((int)cboQuestionType.SelectedValue==2) ?QuestionType.Multiple:QuestionType.TF));
+            AddQuestion2 step2 = new AddQuestion2(_question);
+            step2.setQuestion(_question);
 
             if (step2.ShowDialog() == true)
             {

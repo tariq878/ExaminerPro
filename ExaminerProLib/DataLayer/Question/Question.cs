@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace ExaminerProLib.DataLayer.Question
 {
+    public enum QuestionType { MCQ, Multiple, TF };
+
     public class Question
     {
+       
+        int _id;
+        QuestionType _type;
+        int _numoptions;
 
         List<QuestionOption> _options = new List<QuestionOption>();
-        QuestionData _data = new QuestionData();
+       
         public List<QuestionOption> Questions
         {
             get
@@ -23,17 +29,40 @@ namespace ExaminerProLib.DataLayer.Question
             }
         }
 
-
-
-        public QuestionData Data
+        public int NumOptions
         {
             get
             {
-                return _data;
+                return _numoptions;
             }
             set
             {
-                _data = value;
+                _numoptions = value;
+            }
+        }
+
+        public int ID
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+            }
+        }
+
+
+        public QuestionType Type
+        {
+            get
+            {
+                return _type;
+            }
+            set
+            {
+                _type = value;
             }
         }
     }

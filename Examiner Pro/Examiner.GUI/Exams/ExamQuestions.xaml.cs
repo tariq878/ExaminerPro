@@ -71,7 +71,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams
             for (int i = 0; i < _profile.Questions.Count; i++)
             {
                 Question q = _profile.Questions[i];
-                lvQuestions.Items.Add(new LvData { Id = i , tType = q.Data.Type.ToString() , QCount=q.Questions.Count } );
+                lvQuestions.Items.Add(new LvData { Id = i , tType = q.Type.ToString() , QCount=q.Questions.Count } );
 
             }
 
@@ -108,27 +108,31 @@ namespace Examiner_Pro.Examiner.GUI.Exams
 
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
         {
-            if (QuestionHelper.QuestionExists(_profile))
+            _profile.ProfileName = textQuestionProfile.Text;
+
+            if (QuestionHelper.QuestionExists(ref _profile))
             {
                 MessageBoxResult result = MessageBox.Show("Question already exisits, Overrite", "Qestion already present", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 switch (result)
                 {
                     case MessageBoxResult.Yes:
+                        QuestionHelper.DeleteQuestion(_profile);
                         break;
                     default:
                         return;
                 }
 
-                //Save the Exam Result.
-                if (QuestionHelper.SaveQuestion(_profile))
-                {
-                    MessageBox.Show("The question profile has been saved.");
-                }
-                else
-                {
-                    MessageBox.Show("The question profile could not be saved.");
-                }
+              
+            }
 
+            //Save the Exam Result.
+            if (QuestionHelper.SaveQuestion(ref _profile))
+            {
+                MessageBox.Show("The question profile has been saved.");
+            }
+            else
+            {
+                MessageBox.Show("The question profile could not be saved.");
             }
 
         }

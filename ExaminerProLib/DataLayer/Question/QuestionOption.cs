@@ -35,5 +35,7 @@ namespace ExaminerProLib.DataLayer.Question
             }
         }
 
+
+        public int Index { get; set; }
     }
 }

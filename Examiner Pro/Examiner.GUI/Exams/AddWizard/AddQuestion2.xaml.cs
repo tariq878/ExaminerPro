@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
 {
     /// <summary>
@@ -20,7 +21,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
     /// </summary>
     public partial class AddQuestion2 : Window
     {
-        QuestionData _qdata;
+        Question _question;
         List<QuestionOption> _options;
 
         public List<QuestionOption> Options
@@ -36,13 +37,13 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
 
         }
 
-        public AddQuestion2(QuestionData qdata)
+        public AddQuestion2(Question question)
         {
             InitializeComponent();
 
-            _qdata = qdata;
+            _question = question;
             //Create the controls based on the type of question
-            switch (_qdata.Type)
+            switch (_question.Type)
             {
                 case QuestionType.MCQ: //Multiple choice quesitons
                     CreateMQC();
@@ -112,7 +113,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
             gridContent.ColumnDefinitions.Add(col2);
 
 
-            for (int i = 0; i < _qdata.QuestionCount; i++)
+            for (int i = 0; i < _question.NumOptions; i++)
             {
                 RowDefinition row = new RowDefinition();
                 //row.Height = new GridLength((100 / _qdata.QuestionCount > 8 ? 8 : 100 / _qdata.QuestionCount), GridUnitType.Star);
@@ -120,7 +121,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
                 gridContent.RowDefinitions.Add(row);
             }
 
-            for (int i = 0; i < _qdata.QuestionCount; i++)
+            for (int i = 0; i < _question.NumOptions ; i++)
             {
                 CheckBox btnRadio = new CheckBox();
                 Grid.SetRow(btnRadio, i);
@@ -154,7 +155,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
             gridContent.ColumnDefinitions.Add(col2);
 
 
-            for (int i = 0; i < _qdata.QuestionCount; i++)
+            for (int i = 0; i < _question.NumOptions ; i++)
             {
                 RowDefinition row = new RowDefinition();
                 //row.Height = new GridLength((100 / _qdata.QuestionCount > 8 ? 8 : 100 / _qdata.QuestionCount), GridUnitType.Star);
@@ -162,7 +163,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
                 gridContent.RowDefinitions.Add(row);
             }
 
-            for (int i = 0; i < _qdata.QuestionCount; i++)
+            for (int i = 0; i < _question.NumOptions; i++)
             {
                 RadioButton btnRadio = new RadioButton();
                 Grid.SetRow(btnRadio, i);
@@ -186,9 +187,9 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
             }
         }
 
-        internal void setData(QuestionData data)
+        internal void setQuestion(Question question)
         {
-            _qdata = data;
+            _question = question;
         }
 
         private void Button_Next_Click(object sender, RoutedEventArgs e)
@@ -200,11 +201,11 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
             {
                 //All the inputs are valid. lets add question to the database against the question profile.
                 //Popluate question contents.
-                switch (_qdata.Type)
+                switch (_question.Type)
                 {
                     case QuestionType.MCQ: //Multiple choice quesitons
                     case QuestionType.TF:  //True false;
-                        for (int i = 0; i < _qdata.QuestionCount; i++)
+                        for (int i = 0; i < _question.NumOptions; i++)
                         {
                             RadioButton btnRadio = (RadioButton)gridContent.FindName("rdo" + i.ToString());
                             TextBox txtBox = (TextBox)gridContent.FindName("txt" + i.ToString());
@@ -215,7 +216,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
                         }
                         break;
                     case QuestionType.Multiple: //Multiple selectable quesitons
-                        for (int i = 0; i < _qdata.QuestionCount; i++)
+                        for (int i = 0; i < _question.NumOptions; i++)
                         {
                             CheckBox btnRadio = (CheckBox)this.FindName("chk" + i.ToString());
                             TextBox txtBox = (TextBox)this.FindName("txt" + i.ToString());
@@ -236,7 +237,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
             String error = "";
             bool answermentioned = false;
             bool allselected = true;
-            switch (_qdata.Type)
+            switch (_question.Type)
             {
                 case QuestionType.MCQ: //Multiple choice quesitons
 
