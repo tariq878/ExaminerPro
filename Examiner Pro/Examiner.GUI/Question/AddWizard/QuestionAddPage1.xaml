@@ -1,4 +1,4 @@
-﻿<Window x:Class="Examiner_Pro.Examiner.GUI.Exams.AddWizard.AddQuestion1"
+﻿<Window x:Class="Examiner_Pro.Examiner.GUI.Question.AddWizard"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="AddQuestion1" Height="450" Width="700">

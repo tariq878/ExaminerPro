@@ -1,8 +1,5 @@
-﻿using ExaminerProLib.DataLayer.Binding;
-using ExaminerProLib.DataLayer.Question;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,12 +12,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
+namespace Examiner_Pro.Examiner.GUI.Question.z
 {
     /// <summary>
-    /// Interaction logic for AddQuestion1.xaml
+    /// Interaction logic for QuestionAddPage1.xaml
     /// </summary>
-    public partial class AddQuestion1 : Window
+    public partial class QuestionAddPage1 : Window
     {
         Question _question;
 
@@ -30,7 +27,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.AddWizard
             set { _question = value;  }
         }
 
-        public AddQuestion1()
+        public QuestionAddPage1()
         {
             InitializeComponent();
 

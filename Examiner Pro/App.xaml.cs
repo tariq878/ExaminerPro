@@ -8,7 +8,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using ExaminerProLib.Utils;
-using Examiner_Pro.Examiner.GUI.Exams.AddWizard;
 using Examiner_Pro.Examiner.GUI.Exams;
 
 namespace Examiner_Pro
