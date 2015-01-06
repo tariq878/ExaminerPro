@@ -1,5 +1,4 @@
-﻿using Examiner_Pro.Examiner.GUI.Exams;
-using Examiner_Pro.Examiner.GUI.Users;
+﻿using Examiner_Pro.Examiner.GUI.Users;
 using ExaminerProLib.Utils;
 using System;
 using System.Collections.Generic;
@@ -31,8 +30,8 @@ namespace Examiner_Pro.Examiner.GUI
         private void Menu_NewClick(object sender, RoutedEventArgs e)
         {
             Log.Instance.CreateEntry("Starting the main windoiw");
-            CreateCourse userForm = new CreateCourse();
-            userForm.ShowDialog();
+            //CreateCourse userForm = new CreateCourse();
+            //userForm.ShowDialog();
         }
         #endregion
 

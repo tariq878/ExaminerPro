@@ -8,7 +8,7 @@ namespace ExaminerProLib.DataLayer.Question
 {
     public enum QuestionType { MCQ, Multiple, TF };
 
-    public class Question
+    public class QuestionInfo
     {
        
         int _id;

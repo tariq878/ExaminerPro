@@ -11,7 +11,7 @@ namespace ExaminerProLib.DataLayer.Question
 
         private int _id;
         private String _profilename;
-        private List<Question> _questions = new List<Question>();
+        private List<QuestionInfo> _questions = new List<QuestionInfo>();
 
         public int ID
         {
@@ -25,7 +25,7 @@ namespace ExaminerProLib.DataLayer.Question
             set { _profilename = value; }
         }
 
-        public List<Question> Questions
+        public List<QuestionInfo> Questions
         {
             get { return _questions; }
             set { _questions = value; }

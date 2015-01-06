@@ -1,5 +1,9 @@
-﻿using System;
+﻿using Examiner_Pro.Examiner.GUI.Question.AddWizard;
+using ExaminerProLib.DataLayer.Binding;
+using ExaminerProLib.DataLayer.Question;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,16 +16,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Examiner_Pro.Examiner.GUI.Question.z
+namespace Examiner_Pro.Examiner.GUI.Question.AddWizard
 {
     /// <summary>
     /// Interaction logic for QuestionAddPage1.xaml
     /// </summary>
     public partial class QuestionAddPage1 : Window
     {
-        Question _question;
+        QuestionInfo _question;
 
-        public Question QuestionG
+        public QuestionInfo QuestionG
         {
             get { return _question;  }
             set { _question = value;  }
@@ -43,7 +47,7 @@ namespace Examiner_Pro.Examiner.GUI.Question.z
             cboNumChoices.DisplayMemberPath = numbers.Columns["question"].ToString();
             cboNumChoices.SelectedValuePath = numbers.Columns["number"].ToString();
 
-            _question = new Question();
+            _question = new QuestionInfo();
 
         }
 
@@ -66,7 +70,7 @@ namespace Examiner_Pro.Examiner.GUI.Question.z
             //Next is clicked, create a dynamic window based on the options provided.
             _question.NumOptions = (cboNumChoices.SelectedValue==null?0:(int)cboNumChoices.SelectedValue);
             _question.Type = ( ((int)cboQuestionType.SelectedValue==1) ?QuestionType.MCQ:( ((int)cboQuestionType.SelectedValue==2) ?QuestionType.Multiple:QuestionType.TF));
-            AddQuestion2 step2 = new AddQuestion2(_question);
+            QuestionAddPage2 step2 = new QuestionAddPage2(_question);
             step2.setQuestion(_question);
 
             if (step2.ShowDialog() == true)

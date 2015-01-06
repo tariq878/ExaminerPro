@@ -66,7 +66,7 @@ namespace ExaminerProLib.DataLayer.Question
                 }
 
                 //Lets save each question in the profile.
-                foreach (Question question in _profile.Questions)
+                foreach (QuestionInfo question in _profile.Questions)
                 {
                     //1 Save the question details.
                     String query2 = "Insert into question (profileid,type,options) values (@pid,@type,opt);";
@@ -160,9 +160,9 @@ namespace ExaminerProLib.DataLayer.Question
 
         }
 
-         private static List<Question> GetProfileQuestions(QuestionProfile profile)
+         private static List<QuestionInfo> GetProfileQuestions(QuestionProfile profile)
          {
-             List<Question> questions = new List<Question>();
+             List<QuestionInfo> questions = new List<QuestionInfo>();
              try
              {
                  String query = "select * from   question where profileid = " + profile.ID + ";";
@@ -180,7 +180,7 @@ namespace ExaminerProLib.DataLayer.Question
                  {
                      for (int i = 0; i < myDataSet.Tables["question"].Rows.Count; i++)
                      {
-                         Question question = new Question();
+                         QuestionInfo question = new QuestionInfo();
                          question.NumOptions = (int)myDataSet.Tables["question"].Rows[i]["option"];
                          question.ID = (int)myDataSet.Tables["question"].Rows[i]["id"];
                          question.Type = (QuestionType)myDataSet.Tables["question"].Rows[i]["type"];
@@ -201,7 +201,7 @@ namespace ExaminerProLib.DataLayer.Question
 
          }
 
-         private static List<QuestionOption> GetQuestionOptions(Question question)
+         private static List<QuestionOption> GetQuestionOptions(QuestionInfo question)
          {
              List<QuestionOption> questions = new List<QuestionOption>();
              try

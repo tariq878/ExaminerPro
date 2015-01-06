@@ -43,7 +43,7 @@
     <Compile Include="DataLayer\Course\Course.cs" />
     <Compile Include="DataLayer\DatabaseController.cs" />
     <Compile Include="DataLayer\Exam\ExamHelper.cs" />
-    <Compile Include="DataLayer\Question\Question.cs" />
+    <Compile Include="DataLayer\Question\QuestionInfo.cs" />
     <Compile Include="DataLayer\Question\QuestionHelper.cs" />
     <Compile Include="DataLayer\Question\QuestionOption.cs" />
     <Compile Include="DataLayer\Question\QuestionProfile.cs" />

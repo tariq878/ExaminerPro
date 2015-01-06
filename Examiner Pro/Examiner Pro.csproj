@@ -73,9 +73,6 @@
     <Compile Include="Examiner.GUI\Question\QuestionAdd.xaml.cs">
       <DependentUpon>QuestionAdd.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Examiner.GUI\Question\QuestionCreate.xaml.cs">
-      <DependentUpon>QuestionCreate.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Examiner.GUI\Users\UserCreate.xaml.cs">
       <DependentUpon>UserCreate.xaml</DependentUpon>
     </Compile>
@@ -101,10 +98,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Examiner.GUI\Question\QuestionAdd.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Examiner.GUI\Question\QuestionCreate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
