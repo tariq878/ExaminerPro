@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace ExaminerProLib.DataLayer.Question
 {
@@ -16,7 +17,8 @@ namespace ExaminerProLib.DataLayer.Question
         int _numoptions;
 
         List<QuestionOption> _options = new List<QuestionOption>();
-       
+
+        [XmlElement("Questions")]
         public List<QuestionOption> Questions
         {
             get
@@ -29,6 +31,7 @@ namespace ExaminerProLib.DataLayer.Question
             }
         }
 
+         [XmlAttribute("QuestionCount")]
         public int NumOptions
         {
             get
@@ -41,6 +44,7 @@ namespace ExaminerProLib.DataLayer.Question
             }
         }
 
+         [XmlAttribute("ID")]
         public int ID
         {
             get
@@ -53,7 +57,7 @@ namespace ExaminerProLib.DataLayer.Question
             }
         }
 
-
+          [XmlAttribute("Type")]
         public QuestionType Type
         {
             get

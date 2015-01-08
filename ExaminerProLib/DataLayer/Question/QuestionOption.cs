@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace ExaminerProLib.DataLayer.Question
 {
@@ -11,6 +12,7 @@ namespace ExaminerProLib.DataLayer.Question
         Boolean _correct = false;
         String _text = "";
 
+         [XmlElement("IsTrue")]
         public Boolean Correct
         {
             get
@@ -23,6 +25,7 @@ namespace ExaminerProLib.DataLayer.Question
             }
         }
 
+         [XmlElement("Text")]
         public String DisplayText
         {
             get

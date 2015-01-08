@@ -43,7 +43,7 @@
 
                 <!-- Questions Grid -->
                 <Grid Grid.Row="5" >
-                    <ListView Name="lvQuestions" Margin="30,10,30,30">
+                    <ListView Name="lvQuestions" Margin="30,10,30,30" SelectionMode="Single">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Id"  Width="25" DisplayMemberBinding="{Binding Id}"/>

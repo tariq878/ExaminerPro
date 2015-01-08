@@ -1,4 +1,5 @@
-﻿using Examiner_Pro.Examiner.GUI.Users;
+﻿using Examiner_Pro.Examiner.GUI.Question;
+using Examiner_Pro.Examiner.GUI.Users;
 using ExaminerProLib.Utils;
 using System;
 using System.Collections.Generic;
@@ -55,5 +56,20 @@ namespace Examiner_Pro.Examiner.GUI
 
         }
         #endregion
+
+
+        #region Questions
+        private void Menu_questionNew(object sender, RoutedEventArgs e)
+        {
+            QuestionAdd dialog = new QuestionAdd();
+            dialog.ShowDialog();
+        }
+        private void Menu_questionManage(object sender, RoutedEventArgs e)
+        {
+            QuestionManage dialog = new QuestionManage();
+            dialog.ShowDialog();
+        }
+        #endregion
+
     }
 }

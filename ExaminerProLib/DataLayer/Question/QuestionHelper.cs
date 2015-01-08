@@ -181,7 +181,11 @@ namespace ExaminerProLib.DataLayer.Question
                      for (int i = 0; i < myDataSet.Tables["question"].Rows.Count; i++)
                      {
                          QuestionInfo question = new QuestionInfo();
-                         question.NumOptions = (int)myDataSet.Tables["question"].Rows[i]["option"];
+                         if(Convert.IsDBNull(myDataSet.Tables["question"].Rows[i]["options"]) ) {
+                             question.NumOptions = 0;
+                         } else {
+                             question.NumOptions = (int)myDataSet.Tables["question"].Rows[i]["options"];
+                         }
                          question.ID = (int)myDataSet.Tables["question"].Rows[i]["id"];
                          question.Type = (QuestionType)myDataSet.Tables["question"].Rows[i]["type"];
                          question.Questions = GetQuestionOptions(question);
@@ -242,8 +246,9 @@ namespace ExaminerProLib.DataLayer.Question
          }
 
 
-        public static void DeleteQuestion(QuestionProfile _profile)
+        public static bool DeleteQuestion(QuestionProfile _profile)
         {
+            bool result = false;
             try
             {
                 //Step 1. delete all question options.
@@ -270,13 +275,17 @@ namespace ExaminerProLib.DataLayer.Question
                 myDataAdapter2.DeleteCommand.ExecuteNonQuery();
 
                 Log.Instance.CreateEntry("Question profile deleted successfully !!");
+                result = true;
             }
             catch (Exception ex)
             {
                 Log.Instance.LogException(ex);
-                return ;
+                result= false;
             }
-           
+
+            return result;
         }
+
+      
     }
 }

@@ -14,6 +14,10 @@
                     <Separator/>
                     <MenuItem Header="_Exit"/>
                 </MenuItem>
+                <MenuItem Header="Question">
+                    <MenuItem Header="Create Question Profile" Click="Menu_questionNew"/>
+                    <MenuItem Header="_Manage Question Profile" Click="Menu_questionManage"/>
+                </MenuItem>
                 <MenuItem Header="_Users">
                     <MenuItem Header="_Create Users" Click="Menu_userNew"/>
                     <MenuItem Header="_Delete Users" Click="Menu_userDelete"/>

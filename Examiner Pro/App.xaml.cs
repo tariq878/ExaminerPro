@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using ExaminerProLib.Utils;
 using Examiner_Pro.Examiner.GUI.Question;
+using Examiner_Pro.Examiner.GUI.Exams;
 
 namespace Examiner_Pro
 {
@@ -26,8 +27,11 @@ namespace Examiner_Pro
 
             //var dialog = new LoginWindow();
             //AddQuestion1 dialog = new AddQuestion1();
-            QuestionAdd dialog = new QuestionAdd();
-                if (dialog.ShowDialog() == true)
+            //QuestionAdd dialog = new QuestionAdd();
+            //QuestionManage dialog = new QuestionManage();
+            //Main dialog = new Main();
+            ExamCreate dialog = new ExamCreate();
+            if (dialog.ShowDialog() == true)
             {
                 Log.Instance.CreateEntry("User Logged In.");
                 var mainWindow = new Main();

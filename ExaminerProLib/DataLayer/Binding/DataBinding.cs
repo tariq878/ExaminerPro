@@ -90,5 +90,24 @@ namespace ExaminerProLib.DataLayer.Binding
                 return null;
             }
         }
+
+        public static DataTable GetQuestionProfiles()
+        {
+            try
+            {
+                OleDbCommand oleDbCommand1 = new System.Data.OleDb.OleDbCommand("Select id,name from  questionprofile", DatabaseController.Instance().Connection);
+                OleDbDataReader reader = oleDbCommand1.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("id", typeof(int));
+                dt.Columns.Add("name", typeof(string));
+                dt.Load(reader);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Log.Instance.LogException(ex);
+                return null;
+            }
+        }
     }
 }
