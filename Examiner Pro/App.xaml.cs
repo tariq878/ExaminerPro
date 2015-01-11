@@ -29,8 +29,8 @@ namespace Examiner_Pro
             //AddQuestion1 dialog = new AddQuestion1();
             //QuestionAdd dialog = new QuestionAdd();
             //QuestionManage dialog = new QuestionManage();
-            //Main dialog = new Main();
-            ExamCreate dialog = new ExamCreate();
+            Main dialog = new Main();
+            //ExamManage dialog = new ExamManage();
             if (dialog.ShowDialog() == true)
             {
                 Log.Instance.CreateEntry("User Logged In.");

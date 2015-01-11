@@ -6,11 +6,8 @@
         <DockPanel >
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="_Exams">
-                    <MenuItem Header="_New" Click="Menu_NewClick"/>
-                    <MenuItem Header="_List"/>
-                    <Separator/>
-                    <MenuItem Header="_Import"/>
-                    <MenuItem Header="E_xport"/>
+                    <MenuItem Header="_New" Click="Menu_ExamNew"/>
+                    <MenuItem Header="_Manage" Click="Menu_ExamManage"/>
                     <Separator/>
                     <MenuItem Header="_Exit"/>
                 </MenuItem>

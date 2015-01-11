@@ -12,6 +12,36 @@ namespace ExaminerProLib.DataLayer.Question
     public class QuestionHelper
     {
 
+        public static String GetQuestionName(int questionid)
+        {
+            try
+            {
+                String query = "select * from   questionprofile where id = " + questionid + ";";
+                OleDbCommand myAccessCommand = new OleDbCommand(query, DatabaseController.Instance().Connection);
+                OleDbDataAdapter myDataAdapter = new OleDbDataAdapter(myAccessCommand);
+
+                DataSet myDataSet = new DataSet();
+                myDataAdapter.Fill(myDataSet, "questionprofile");
+
+                if (myDataSet.Tables["questionprofile"].Rows.Count < 1)
+                {
+
+                    return "";
+                }
+                else
+                {
+                    String subject = (String)myDataSet.Tables["questionprofile"].Rows[0]["name"];
+                    return subject;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Log.Instance.LogException(ex);
+                return "";
+            }
+
+        }
 
         public static bool QuestionExists(ref QuestionProfile  _profile)
         {

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\
 Examiner_Pro
 none
 false
 DEBUG;TRACE
-R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\App.xaml
-9746404490
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Examiner Pro\App.xaml
+10-1681803853
 1-949578236
-14-440888893
-15-757572192
-Examiner.GUI\Exams\ExamCreate.xaml;Examiner.GUI\LoginWindow.xaml;Examiner.GUI\Main.xaml;Examiner.GUI\Question\AddWizard\QuestionAddPage1.xaml;Examiner.GUI\Question\AddWizard\QuestionAddPage2.xaml;Examiner.GUI\Question\QuestionAdd.xaml;Examiner.GUI\Question\QuestionManage.xaml;Examiner.GUI\Users\UserCreate.xaml;resource.xaml;
+15-206203665
+151344299127
+Examiner.GUI\Exams\ExamCreate.xaml;Examiner.GUI\Exams\ExamManage.xaml;Examiner.GUI\LoginWindow.xaml;Examiner.GUI\Main.xaml;Examiner.GUI\Question\AddWizard\QuestionAddPage1.xaml;Examiner.GUI\Question\AddWizard\QuestionAddPage2.xaml;Examiner.GUI\Question\QuestionAdd.xaml;Examiner.GUI\Question\QuestionManage.xaml;Examiner.GUI\Users\UserCreate.xaml;resource.xaml;
 
 False
 

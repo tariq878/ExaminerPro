@@ -7,3 +7,4 @@ C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\Exami
 C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\ExaminerProLib\obj\Debug\ExaminerProLib.dll
 C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\ExaminerProLib\obj\Debug\ExaminerProLib.pdb
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\ExaminerProLib\obj\Debug\ExaminerProLib.csprojResolveAssemblyReference.cache
+C:\Users\tm\Documents\Visual Studio 2012\Projects\Examiner Pro\ExaminerPro\ExaminerProLib\obj\Debug\ExaminerProLib.csprojResolveAssemblyReference.cache

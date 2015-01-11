@@ -60,6 +60,9 @@
     <Compile Include="Examiner.GUI\Exams\ExamCreate.xaml.cs">
       <DependentUpon>ExamCreate.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examiner.GUI\Exams\ExamManage.xaml.cs">
+      <DependentUpon>ExamManage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examiner.GUI\Log.cs" />
     <Compile Include="Examiner.GUI\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
@@ -88,6 +91,10 @@
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
     <Page Include="Examiner.GUI\Exams\ExamCreate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Examiner.GUI\Exams\ExamManage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

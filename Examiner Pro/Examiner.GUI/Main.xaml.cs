@@ -1,4 +1,5 @@
-﻿using Examiner_Pro.Examiner.GUI.Question;
+﻿using Examiner_Pro.Examiner.GUI.Exams;
+using Examiner_Pro.Examiner.GUI.Question;
 using Examiner_Pro.Examiner.GUI.Users;
 using ExaminerProLib.Utils;
 using System;
@@ -28,12 +29,21 @@ namespace Examiner_Pro.Examiner.GUI
         }
 
         #region Exams
-        private void Menu_NewClick(object sender, RoutedEventArgs e)
+        private void Menu_ExamNew(object sender, RoutedEventArgs e)
         {
             Log.Instance.CreateEntry("Starting the main windoiw");
-            //CreateCourse userForm = new CreateCourse();
-            //userForm.ShowDialog();
+            ExamCreate dialog = new ExamCreate();
+            dialog.ShowDialog();
         }
+
+        private void Menu_ExamManage(object sender, RoutedEventArgs e)
+        {
+            Log.Instance.CreateEntry("Starting the main windoiw");
+            ExamManage dialog = new ExamManage();
+            dialog.ShowDialog();
+        }
+
+        
         #endregion
 
 
