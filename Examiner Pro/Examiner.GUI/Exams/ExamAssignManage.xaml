@@ -1,0 +1,49 @@
+﻿<Window x:Class="Examiner_Pro.Examiner.GUI.Exams.ExamAssignManage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Manage Questions" Height="600" Width="700">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15*" />
+                <RowDefinition Height="85*" />
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Source="pack://siteoforigin:,,,/Media/education_banner.jpg" Stretch="Fill"/>
+            <Grid Grid.Row="1" Height="477">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="6*" />
+                    <RowDefinition Height="6*" />
+                    <RowDefinition Height="60*" />
+                    <RowDefinition Height="6*" />
+                    <RowDefinition Height="6*" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Text ="Manage Exams:" Height="20"  HorizontalAlignment="Left" Margin="3,3,3,3" x:Name ="title" VerticalAlignment="Top" Width="247"  OpacityMask="Azure" Foreground="BlueViolet" FontWeight="Bold" FontSize="14" FontFamily="Calibri Light" />
+                <TextBlock Grid.Row="1"  HorizontalAlignment="Left" Margin="67,0,0,0" x:Name ="errormessage" VerticalAlignment="Top" Width="247"  OpacityMask="Crimson" Foreground="#FFE5572C" />
+
+                <!-- Questions Grid -->
+                <Grid Grid.Row="2" >
+                    <ListView Name="lvExams" Margin="30,10,30,10" SelectionChanged="Selector_OnSelectionChanged" >
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="id"  Width="30" DisplayMemberBinding="{Binding id}"/>
+                                <GridViewColumn Header="Exam" Width="100" DisplayMemberBinding="{Binding exam}"/>
+                                <GridViewColumn Header="Assigned By" Width="100" DisplayMemberBinding="{Binding aby}"/>
+                                <GridViewColumn Header="Assinged Group" Width="90" DisplayMemberBinding="{Binding ag}"/>
+                                <GridViewColumn Header="Assinged To" Width="100" DisplayMemberBinding="{Binding at}"/>
+                                <GridViewColumn Header="Count" Width="100" DisplayMemberBinding="{Binding count}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+
+
+                <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center">
+                    <Button  Margin="3" Width="110" Content="Delete Exam" HorizontalAlignment="Center" Click="ButtonDelete_Click" Name="btnDelete"/>
+                </StackPanel>
+
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

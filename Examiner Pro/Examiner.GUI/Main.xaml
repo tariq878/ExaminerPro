@@ -9,11 +9,18 @@
                     <MenuItem Header="_New" Click="Menu_ExamNew"/>
                     <MenuItem Header="_Manage" Click="Menu_ExamManage"/>
                     <Separator/>
+                     <MenuItem Header="Assign" Click="Menu_ExamAssign"/>
+                     <MenuItem Header="DeAssign" Click="Menu_ExamDeassign"/>
+                    <Separator/>
                     <MenuItem Header="_Exit"/>
                 </MenuItem>
                 <MenuItem Header="Question">
                     <MenuItem Header="Create Question Profile" Click="Menu_questionNew"/>
                     <MenuItem Header="_Manage Question Profile" Click="Menu_questionManage"/>
+                </MenuItem>
+                <MenuItem Header="Student">
+                    <MenuItem Header="Enrol Students" Click="Menu_studentEnrol"/>
+                    <MenuItem Header="Manage Students" Click="Menu_studentManage"/>
                 </MenuItem>
                 <MenuItem Header="_Users">
                     <MenuItem Header="_Create Users" Click="Menu_userNew"/>

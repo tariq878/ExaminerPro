@@ -109,5 +109,43 @@ namespace ExaminerProLib.DataLayer.Binding
                 return null;
             }
         }
+
+        public static DataTable GetStudents()
+        {
+            try
+            {
+                OleDbCommand oleDbCommand1 = new System.Data.OleDb.OleDbCommand("Select regnum,studentname from  student", DatabaseController.Instance().Connection);
+                OleDbDataReader reader = oleDbCommand1.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("regnum", typeof(int));
+                dt.Columns.Add("studentname", typeof(string));
+                dt.Load(reader);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Log.Instance.LogException(ex);
+                return null;
+            }
+        }
+
+        public static DataTable GetExams()
+        {
+            try
+            {
+                OleDbCommand oleDbCommand1 = new System.Data.OleDb.OleDbCommand("Select id,title from  exam", DatabaseController.Instance().Connection);
+                OleDbDataReader reader = oleDbCommand1.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("id", typeof(int));
+                dt.Columns.Add("title", typeof(string));
+                dt.Load(reader);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Log.Instance.LogException(ex);
+                return null;
+            }
+        }
     }
 }

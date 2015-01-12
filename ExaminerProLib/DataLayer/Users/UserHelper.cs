@@ -132,5 +132,35 @@ namespace ExaminerProLib.DataLayer.Users
             }
         }
 
+
+        public static String GetStudentName(int p)
+        {
+            try
+            {
+                String query = "select * from   users where id= " + p + ";";
+                OleDbCommand myAccessCommand = new OleDbCommand(query, DatabaseController.Instance().Connection);
+                OleDbDataAdapter myDataAdapter = new OleDbDataAdapter(myAccessCommand);
+
+                DataSet myDataSet = new DataSet();
+                myDataAdapter.Fill(myDataSet, "users");
+
+                if (myDataSet.Tables["users"].Rows.Count < 1)
+                {
+
+                    return "UNKNOWN";
+                }
+                else
+                {
+                    String subject = (String)myDataSet.Tables["users"].Rows[0]["username"];
+                    return subject;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Log.Instance.LogException(ex);
+                return "UNKNOWN";
+            }
+        }
     }
 }

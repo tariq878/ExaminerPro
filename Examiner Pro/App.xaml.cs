@@ -10,6 +10,7 @@ using System.Windows;
 using ExaminerProLib.Utils;
 using Examiner_Pro.Examiner.GUI.Question;
 using Examiner_Pro.Examiner.GUI.Exams;
+using Examiner_Pro.Examiner.GUI.Student;
 
 namespace Examiner_Pro
 {
@@ -29,8 +30,10 @@ namespace Examiner_Pro
             //AddQuestion1 dialog = new AddQuestion1();
             //QuestionAdd dialog = new QuestionAdd();
             //QuestionManage dialog = new QuestionManage();
-            Main dialog = new Main();
+            //Main dialog = new Main();
             //ExamManage dialog = new ExamManage();
+            var dialog = new ExamAssignManage();
+
             if (dialog.ShowDialog() == true)
             {
                 Log.Instance.CreateEntry("User Logged In.");

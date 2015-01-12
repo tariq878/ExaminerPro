@@ -43,6 +43,20 @@ namespace Examiner_Pro.Examiner.GUI
             dialog.ShowDialog();
         }
 
+        private void Menu_ExamAssign(object sender, RoutedEventArgs e)
+        {
+            Log.Instance.CreateEntry("Starting the main windoiw");
+            ExamManage dialog = new ExamManage();
+            dialog.ShowDialog();
+        }
+
+        private void Menu_ExamDeassign(object sender, RoutedEventArgs e)
+        {
+            Log.Instance.CreateEntry("Starting the main windoiw");
+            ExamManage dialog = new ExamManage();
+            dialog.ShowDialog();
+        }
+
         
         #endregion
 
@@ -75,6 +89,19 @@ namespace Examiner_Pro.Examiner.GUI
             dialog.ShowDialog();
         }
         private void Menu_questionManage(object sender, RoutedEventArgs e)
+        {
+            QuestionManage dialog = new QuestionManage();
+            dialog.ShowDialog();
+        }
+        #endregion
+
+        #region Students
+        private void Menu_studentEnrol(object sender, RoutedEventArgs e)
+        {
+            QuestionAdd dialog = new QuestionAdd();
+            dialog.ShowDialog();
+        }
+        private void Menu_studentManage(object sender, RoutedEventArgs e)
         {
             QuestionManage dialog = new QuestionManage();
             dialog.ShowDialog();

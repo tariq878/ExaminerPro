@@ -43,12 +43,16 @@
     <Compile Include="DataLayer\Course\Course.cs" />
     <Compile Include="DataLayer\DatabaseController.cs" />
     <Compile Include="DataLayer\Exam\Exam.cs" />
+    <Compile Include="DataLayer\Exam\ExamAssignment.cs" />
+    <Compile Include="DataLayer\Exam\ExamAssignO.cs" />
     <Compile Include="DataLayer\Exam\ExamHelper.cs" />
     <Compile Include="DataLayer\Grade\GradeHelper.cs" />
     <Compile Include="DataLayer\Question\QuestionInfo.cs" />
     <Compile Include="DataLayer\Question\QuestionHelper.cs" />
     <Compile Include="DataLayer\Question\QuestionOption.cs" />
     <Compile Include="DataLayer\Question\QuestionProfile.cs" />
+    <Compile Include="DataLayer\Student\StudentHelper.cs" />
+    <Compile Include="DataLayer\Student\StudentO.cs" />
     <Compile Include="DataLayer\Subject\SubjectHelper.cs" />
     <Compile Include="DataLayer\Users\Roles.cs" />
     <Compile Include="DataLayer\Users\User.cs" />
@@ -57,6 +61,7 @@
     <Compile Include="Utils\ExportUtils.cs" />
     <Compile Include="Utils\Log.cs" />
     <Compile Include="Utils\Security.cs" />
+    <Compile Include="Utils\SessionUtil.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
