@@ -149,6 +149,40 @@ namespace ExaminerProLib.DataLayer.Question
             return true;
         }
 
+
+        public static QuestionProfile GetAllQuestionById(int p)
+        {
+            QuestionProfile question = new QuestionProfile();
+            try
+            {
+                String query = "select * from   questionprofile where id = " + p +";" ;
+                OleDbCommand myAccessCommand = new OleDbCommand(query, DatabaseController.Instance().Connection);
+                OleDbDataAdapter myDataAdapter = new OleDbDataAdapter(myAccessCommand);
+
+                DataSet myDataSet = new DataSet();
+                myDataAdapter.Fill(myDataSet, "questionprofile");
+
+                if (myDataSet.Tables["questionprofile"].Rows.Count < 1)
+                {
+                    return null;
+                }
+                else
+                {
+                    question.ID = (int)myDataSet.Tables["questionprofile"].Rows[0]["id"];
+                    question.ProfileName = (string)myDataSet.Tables["questionprofile"].Rows[0]["Name"];
+                    question.Questions = GetProfileQuestions(question);
+                        
+                }
+
+                return question;
+            }
+            catch (Exception ex)
+            {
+                Log.Instance.LogException(ex);
+                return null;
+            }
+
+        }
     
          public static List<QuestionProfile> GetAllQuestions()
         {
@@ -316,6 +350,7 @@ namespace ExaminerProLib.DataLayer.Question
             return result;
         }
 
-      
+
+
     }
 }

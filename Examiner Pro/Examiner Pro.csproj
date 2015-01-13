@@ -57,6 +57,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Examiner.GUI\Exams\Attempt\ExamAttempt.xaml.cs">
+      <DependentUpon>ExamAttempt.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examiner.GUI\Exams\ExamAssign.xaml.cs">
       <DependentUpon>ExamAssign.xaml</DependentUpon>
     </Compile>
@@ -65,6 +68,9 @@
     </Compile>
     <Compile Include="Examiner.GUI\Exams\ExamCreate.xaml.cs">
       <DependentUpon>ExamCreate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examiner.GUI\Exams\ExamList.xaml.cs">
+      <DependentUpon>ExamList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examiner.GUI\Exams\ExamManage.xaml.cs">
       <DependentUpon>ExamManage.xaml</DependentUpon>
@@ -102,6 +108,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
+    <Page Include="Examiner.GUI\Exams\Attempt\ExamAttempt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Examiner.GUI\Exams\ExamAssign.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -111,6 +121,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Examiner.GUI\Exams\ExamCreate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Examiner.GUI\Exams\ExamList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

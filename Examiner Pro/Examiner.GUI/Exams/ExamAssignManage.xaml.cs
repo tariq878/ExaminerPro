@@ -1,4 +1,6 @@
 ﻿using ExaminerProLib.DataLayer.Exam;
+using ExaminerProLib.DataLayer.Grade;
+using ExaminerProLib.DataLayer.Student;
 using ExaminerProLib.DataLayer.Users;
 using ExaminerProLib.Utils;
 using System;
@@ -75,8 +77,17 @@ namespace Examiner_Pro.Examiner.GUI.Exams
                     data.aby = UserHelper.GetStudentName(profile.UserId);
                     data.bag = profile.IsToGrade;
                     data.ag = (profile.IsToGrade==true?"Grade":"Student");
-
-                    data.at = profile.StudentId;
+                    if (profile.IsToGrade == true)
+                    {
+                        data.nat = profile.GradeId;
+                        data.at = GradeHelper.GetGradeName(profile.GradeId);
+                    }
+                    else
+                    {
+                        data.nat = profile.StudentId;
+                        data.at = StudentHelper.GetStudentName(profile.StudentId);
+                    }
+                    
                     data.count = profile.StudentCount;
 
                     lvExams.Items.Add(data);

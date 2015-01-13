@@ -32,7 +32,7 @@ namespace Examiner_Pro
             //QuestionManage dialog = new QuestionManage();
             //Main dialog = new Main();
             //ExamManage dialog = new ExamManage();
-            var dialog = new ExamAssignManage();
+            var dialog = new ExamList();
 
             if (dialog.ShowDialog() == true)
             {

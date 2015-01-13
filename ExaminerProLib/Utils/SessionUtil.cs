@@ -10,5 +10,6 @@ namespace ExaminerProLib.Utils
     {
         public static int UserId { get; set; }
 
+        public static int StudentId { get; set; }
     }
 }
