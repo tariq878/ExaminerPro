@@ -99,12 +99,13 @@ namespace ExaminerProLib.DataLayer.Question
                 foreach (QuestionInfo question in _profile.Questions)
                 {
                     //1 Save the question details.
-                    String query2 = "Insert into question (profileid,type,options) values (@pid,@type,opt);";
+                    String query2 = "Insert into question (profileid,type,options,questiontext) values (@pid,@type,opt,#txt);";
 
                     OleDbCommand myAccessCommand1 = new OleDbCommand(query2, DatabaseController.Instance().Connection);
                     myAccessCommand1.Parameters.AddWithValue("@pid", _profile.ID);
                     myAccessCommand1.Parameters.AddWithValue("@type", question.Type);
                     myAccessCommand1.Parameters.AddWithValue("@opt", question.NumOptions);
+                    myAccessCommand1.Parameters.AddWithValue("@txt", question.QuestionText);
 
                     myAccessCommand1.ExecuteNonQuery();
                     //Get the id.
@@ -252,6 +253,7 @@ namespace ExaminerProLib.DataLayer.Question
                          }
                          question.ID = (int)myDataSet.Tables["question"].Rows[i]["id"];
                          question.Type = (QuestionType)myDataSet.Tables["question"].Rows[i]["type"];
+                         question.QuestionText = (string)myDataSet.Tables["question"].Rows[i]["questiontext"];
                          question.Questions = GetQuestionOptions(question);
                          questions.Add(question);
 

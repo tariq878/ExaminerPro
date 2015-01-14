@@ -30,6 +30,9 @@ namespace Examiner_Pro.Examiner.GUI.Exams.Attempt
         {
             InitializeComponent();
 
+            Uri iconUri = new Uri("pack://siteoforigin:,,,/Media/drawing.ico", UriKind.RelativeOrAbsolute);
+            this.Icon = BitmapFrame.Create(iconUri);
+
             _exam = exam;
             _profile = QuestionHelper.GetAllQuestionById(_exam.QuestionId);
             _totalquestions = _profile.Questions.Count;
@@ -40,32 +43,57 @@ namespace Examiner_Pro.Examiner.GUI.Exams.Attempt
 
         private void RenderControls(QuestionInfo questionInfo)
         {
+            //1. Clear the grid contents
+            ClearGrid();
+
             RenderButtons();
+
+            ColumnDefinition col1 = new ColumnDefinition();
+            ColumnDefinition col2 = new ColumnDefinition();
+            col1.Width = new GridLength(15, GridUnitType.Star);
+            col2.Width = new GridLength(85, GridUnitType.Star);
+            gridQuestions.ColumnDefinitions.Add(col1);
+            gridQuestions.ColumnDefinitions.Add(col2);
+
+
+            //Lets put the text to the grid.
+            RowDefinition row = new RowDefinition();
+            row.Height = new GridLength(30);
+            gridQuestions.RowDefinitions.Add(row);
+
+            TextBlock block = new TextBlock();
+            block.FontSize = 16;
+            block.Foreground = Brushes.BlueViolet;
+            block.Margin = new Thickness(10, 3, 3, 3);
+            if(questionInfo.QuestionText.EndsWith("?"))
+                block.Text = questionInfo.QuestionText;
+            else
+                block.Text = questionInfo.QuestionText + "?";
+            Grid.SetRow(block, 0);
+            Grid.SetColumn(block, 0);
+            Grid.SetColumnSpan(block, 2);
+            block.Name = "block_" + questionInfo.ID;
+            RegisterControl(block.Name, block);
+            gridQuestions.Children.Add(block);
 
             //Now lets render the question.
             switch (questionInfo.Type)
             {
                 case QuestionType.MCQ:
-                    ColumnDefinition col1 = new ColumnDefinition();
-                    ColumnDefinition col2 = new ColumnDefinition();
-                    col1.Width = new GridLength(15, GridUnitType.Star);
-                    col2.Width = new GridLength(85, GridUnitType.Star);
-                    gridQuestions.ColumnDefinitions.Add(col1);
-                    gridQuestions.ColumnDefinitions.Add(col2);
-
+                  
                     for (int i = 0; i < questionInfo.NumOptions; i++)
                     {
-                        RowDefinition row = new RowDefinition();
+                        row = new RowDefinition();
                         //row.Height = new GridLength((100 / _qdata.QuestionCount > 8 ? 8 : 100 / _qdata.QuestionCount), GridUnitType.Star);
                         row.Height = new GridLength(25);
                         gridQuestions.RowDefinitions.Add(row);
 
                         RadioButton btnRadio = new RadioButton();
-                        Grid.SetRow(btnRadio, i);
+                        Grid.SetRow(btnRadio, i+1);
                         Grid.SetColumn(btnRadio, 0);
                         btnRadio.Margin = new Thickness(3, 3, 3, 3);
-                        btnRadio.Name = "rdo" + i.ToString();
-                        RegisterName(btnRadio.Name, btnRadio);
+                        btnRadio.Name = "rdo_" + questionInfo.ID + i.ToString();
+                        RegisterControl(btnRadio.Name, btnRadio);
                         gridQuestions.Children.Add(btnRadio);
 
 
@@ -73,27 +101,90 @@ namespace Examiner_Pro.Examiner.GUI.Exams.Attempt
                         TextBox txtBox = new TextBox();
                         txtBox.Margin = new Thickness(3, 3, 3, 3);
                         txtBox.Text = questionInfo.Questions[i].DisplayText;
-                        Grid.SetRow(txtBox, i);
+                        Grid.SetRow(txtBox, i+1);
                         Grid.SetColumn(txtBox, 1);
-                        txtBox.Name = "txt" + i.ToString();
-                        RegisterName(txtBox.Name, txtBox);
+                        txtBox.Name = "txt_" + questionInfo.ID + i.ToString();
+                        RegisterControl(txtBox.Name, txtBox);
                         gridQuestions.Children.Add(txtBox);
                     }
 
                     break;
                 case QuestionType.Multiple:
 
+                    for (int i = 0; i < questionInfo.NumOptions; i++)
+                    {
+                        row = new RowDefinition();
+                        //row.Height = new GridLength((100 / _qdata.QuestionCount > 8 ? 8 : 100 / _qdata.QuestionCount), GridUnitType.Star);
+                        row.Height = new GridLength(25);
+                        gridQuestions.RowDefinitions.Add(row);
 
+                        CheckBox btnRadio = new CheckBox();
+                        Grid.SetRow(btnRadio, i+1);
+                        Grid.SetColumn(btnRadio, 0);
+                        btnRadio.Margin = new Thickness(3, 3, 3, 3);
+                        btnRadio.Name = "chk_" + questionInfo.ID + i.ToString();
+                        RegisterControl(btnRadio.Name, btnRadio);
+                        btnRadio.Content = "";
+                        gridQuestions.Children.Add(btnRadio);
+
+
+                        //Add text box.
+                        TextBox txtBox = new TextBox();
+                        txtBox.Margin = new Thickness(3, 3, 3, 3);
+                        txtBox.Text = questionInfo.Questions[i].DisplayText;
+                        Grid.SetRow(txtBox, i+1);
+                        Grid.SetColumn(txtBox, 1);
+                        txtBox.Name = "txt_" + questionInfo.ID + i.ToString();
+                        RegisterControl(txtBox.Name, txtBox);
+                        gridQuestions.Children.Add(txtBox);
+                    }
 
 
                     break;
                 case QuestionType.TF:
 
 
+                    for (int i = 0; i < questionInfo.NumOptions; i++)
+                    {
+                        row = new RowDefinition();
+                        //row.Height = new GridLength((100 / _qdata.QuestionCount > 8 ? 8 : 100 / _qdata.QuestionCount), GridUnitType.Star);
+                        row.Height = new GridLength(25);
+                        gridQuestions.RowDefinitions.Add(row);
+
+                        RadioButton btnRadio = new RadioButton();
+                        Grid.SetRow(btnRadio, i+1);
+                        Grid.SetColumn(btnRadio, 0);
+                        btnRadio.Margin = new Thickness(3, 3, 3, 3);
+                        btnRadio.Name = "rdo_" + questionInfo.ID + i.ToString();
+                        RegisterControl(btnRadio.Name, btnRadio);
+                        gridQuestions.Children.Add(btnRadio);
+
+
+                        //Add text box.
+                        TextBox txtBox = new TextBox();
+                        txtBox.Margin = new Thickness(3, 3, 3, 3);
+                        txtBox.Text = questionInfo.Questions[i].DisplayText;
+                        Grid.SetRow(txtBox, i+1);
+                        Grid.SetColumn(txtBox, 1);
+                        txtBox.Name = "txt_" + questionInfo.ID + i.ToString();
+                        RegisterControl(txtBox.Name, txtBox);
+                        gridQuestions.Children.Add(txtBox);
+                    }
+
 
 
                     break;
             }
+
+        }
+
+        private void ClearGrid()
+        {
+            gridQuestions.RowDefinitions.Clear();
+            gridQuestions.ColumnDefinitions.Clear();
+
+            gridQuestions.Children.Clear();
+
 
         }
 
@@ -119,6 +210,13 @@ namespace Examiner_Pro.Examiner.GUI.Exams.Attempt
         {
             //Set the status of question as skipped.
             //Render the next question.
+            if (_currentquestion + 1 < _totalquestions)
+                RenderControls(_profile.Questions[++_currentquestion]);
+            else
+            {
+                //Finish and save ansers.
+
+            }
         }
 
         private void ButtonPrev_Click(object sender, RoutedEventArgs e)
@@ -126,6 +224,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.Attempt
             // 1. Make sure question is answered
             // 2. Store the uesr answer.
             // 3. Render previous question if more otherwise finish and submit the results.
+            RenderControls(_profile.Questions[--_currentquestion]);
         }
 
         private void ButtonNext_Click(object sender, RoutedEventArgs e)
@@ -133,12 +232,27 @@ namespace Examiner_Pro.Examiner.GUI.Exams.Attempt
             // 1. Make sure question is answered
             // 2. Store the uesr answer.
             // 3. Render next question if more otherwise finish and submit the results.
+            if (_currentquestion+1 < _totalquestions)
+                RenderControls(_profile.Questions[++_currentquestion]);
+            else
+            {
+                //Finish and save ansers.
+
+            }
         }
 
         private void ButtonCancel_Click(object sender, RoutedEventArgs e)
         {
             //1. Mark the attempt as cancelled. Dont store the results as well.
+            RenderControls(_profile.Questions[++_currentquestion]);
+        }
 
+
+        void RegisterControl<T>(string textBoxName, T textBox)
+        {
+            if ((T)this.FindName(textBoxName) != null)
+                this.UnregisterName(textBoxName);
+            this.RegisterName(textBoxName, textBox);
         }
     }
 }

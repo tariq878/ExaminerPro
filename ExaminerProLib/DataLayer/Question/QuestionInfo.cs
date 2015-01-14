@@ -69,5 +69,7 @@ namespace ExaminerProLib.DataLayer.Question
                 _type = value;
             }
         }
+
+          public string QuestionText { get; set; }
     }
 }

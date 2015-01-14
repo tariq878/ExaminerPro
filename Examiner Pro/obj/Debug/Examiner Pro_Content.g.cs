@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("media/drawing.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("media/education_banner.jpg")]
 
 

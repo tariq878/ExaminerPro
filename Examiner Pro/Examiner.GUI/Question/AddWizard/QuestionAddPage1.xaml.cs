@@ -70,6 +70,7 @@ namespace Examiner_Pro.Examiner.GUI.Question.AddWizard
             //Next is clicked, create a dynamic window based on the options provided.
             _question.NumOptions = (cboNumChoices.SelectedValue==null?0:(int)cboNumChoices.SelectedValue);
             _question.Type = ( ((int)cboQuestionType.SelectedValue==1) ?QuestionType.MCQ:( ((int)cboQuestionType.SelectedValue==2) ?QuestionType.Multiple:QuestionType.TF));
+            _question.QuestionText = txtQuestionText.Text;
             QuestionAddPage2 step2 = new QuestionAddPage2(_question);
             step2.setQuestion(_question);
 
