@@ -11,6 +11,8 @@ namespace ExaminerProLib.DataLayer.Question
     {
         Boolean _correct = false;
         String _text = "";
+        Boolean _answered = false;
+        
 
          [XmlElement("IsTrue")]
         public Boolean Correct
@@ -38,7 +40,18 @@ namespace ExaminerProLib.DataLayer.Question
             }
         }
 
-
+         [XmlIgnore]
+         public bool Answered
+         {
+             get
+             {
+                 return _answered;
+             }
+             set
+             {
+                 _answered = value;
+             }
+         }
         public int Index { get; set; }
     }
 }

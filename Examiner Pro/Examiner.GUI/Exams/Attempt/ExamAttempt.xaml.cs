@@ -92,7 +92,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.Attempt
                         Grid.SetRow(btnRadio, i+1);
                         Grid.SetColumn(btnRadio, 0);
                         btnRadio.Margin = new Thickness(3, 3, 3, 3);
-                        btnRadio.Name = "rdo_" + questionInfo.ID + i.ToString();
+                        btnRadio.Name = "rdo"  + i.ToString();
                         RegisterControl(btnRadio.Name, btnRadio);
                         gridQuestions.Children.Add(btnRadio);
 
@@ -103,7 +103,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.Attempt
                         txtBox.Text = questionInfo.Questions[i].DisplayText;
                         Grid.SetRow(txtBox, i+1);
                         Grid.SetColumn(txtBox, 1);
-                        txtBox.Name = "txt_" + questionInfo.ID + i.ToString();
+                        txtBox.Name = "txt" + i.ToString();
                         RegisterControl(txtBox.Name, txtBox);
                         gridQuestions.Children.Add(txtBox);
                     }
@@ -122,7 +122,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.Attempt
                         Grid.SetRow(btnRadio, i+1);
                         Grid.SetColumn(btnRadio, 0);
                         btnRadio.Margin = new Thickness(3, 3, 3, 3);
-                        btnRadio.Name = "chk_" + questionInfo.ID + i.ToString();
+                        btnRadio.Name = "chk" + i.ToString();
                         RegisterControl(btnRadio.Name, btnRadio);
                         btnRadio.Content = "";
                         gridQuestions.Children.Add(btnRadio);
@@ -134,7 +134,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.Attempt
                         txtBox.Text = questionInfo.Questions[i].DisplayText;
                         Grid.SetRow(txtBox, i+1);
                         Grid.SetColumn(txtBox, 1);
-                        txtBox.Name = "txt_" + questionInfo.ID + i.ToString();
+                        txtBox.Name = "txt" +  i.ToString();
                         RegisterControl(txtBox.Name, txtBox);
                         gridQuestions.Children.Add(txtBox);
                     }
@@ -155,7 +155,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.Attempt
                         Grid.SetRow(btnRadio, i+1);
                         Grid.SetColumn(btnRadio, 0);
                         btnRadio.Margin = new Thickness(3, 3, 3, 3);
-                        btnRadio.Name = "rdo_" + questionInfo.ID + i.ToString();
+                        btnRadio.Name = "rdo" + i.ToString();
                         RegisterControl(btnRadio.Name, btnRadio);
                         gridQuestions.Children.Add(btnRadio);
 
@@ -166,7 +166,7 @@ namespace Examiner_Pro.Examiner.GUI.Exams.Attempt
                         txtBox.Text = questionInfo.Questions[i].DisplayText;
                         Grid.SetRow(txtBox, i+1);
                         Grid.SetColumn(txtBox, 1);
-                        txtBox.Name = "txt_" + questionInfo.ID + i.ToString();
+                        txtBox.Name = "txt"  + i.ToString();
                         RegisterControl(txtBox.Name, txtBox);
                         gridQuestions.Children.Add(txtBox);
                     }
@@ -211,7 +211,10 @@ namespace Examiner_Pro.Examiner.GUI.Exams.Attempt
             //Set the status of question as skipped.
             //Render the next question.
             if (_currentquestion + 1 < _totalquestions)
+            {
+                _profile.Questions[_currentquestion].Correct = QuestionStatus.Skipped;
                 RenderControls(_profile.Questions[++_currentquestion]);
+            }
             else
             {
                 //Finish and save ansers.
@@ -229,14 +232,53 @@ namespace Examiner_Pro.Examiner.GUI.Exams.Attempt
 
         private void ButtonNext_Click(object sender, RoutedEventArgs e)
         {
+            bool answergiven = false;
             // 1. Make sure question is answered
             // 2. Store the uesr answer.
             // 3. Render next question if more otherwise finish and submit the results.
-            if (_currentquestion+1 < _totalquestions)
+            QuestionInfo question = _profile.Questions[_currentquestion];
+            question.Correct = QuestionStatus.Correct;
+            for (int i = 0; i < question.NumOptions; i++)
+            {
+                TextBox txtBox = (TextBox)gridQuestions.FindName("txt" + i.ToString());
+                QuestionOption option = question.Questions.Find(item => item.DisplayText == txtBox.Text);
+                if (question.Type == QuestionType.TF || question.Type == QuestionType.MCQ)
+                {
+                    RadioButton btn = (RadioButton)gridQuestions.FindName("rdo" + i.ToString());
+                    option.Answered = (btn.IsChecked == true ? true : false);
+                }
+                else
+                {
+                    CheckBox btn = (CheckBox)gridQuestions.FindName("chk" + i.ToString());
+                    option.Answered = (btn.IsChecked == true ? true : false);
+                }
+
+                if (option.Answered == true)
+                {
+                    answergiven = true;
+                }
+
+                if (option.Correct != option.Answered)
+                {
+                    question.Correct = QuestionStatus.Wrong;
+                }
+            }
+
+            if (answergiven == false)
+            {
+                MessageBox.Show("Please select one answer!");
+                return;
+            }
+
+
+            if (_currentquestion + 1 < _totalquestions)
+            {
+                //Save to the database the attempt.
                 RenderControls(_profile.Questions[++_currentquestion]);
+            }
             else
             {
-                //Finish and save ansers.
+                //Save to database the attempt.
 
             }
         }
