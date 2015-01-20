@@ -44,9 +44,10 @@
     <Compile Include="DataLayer\DatabaseController.cs" />
     <Compile Include="DataLayer\Exam\Exam.cs" />
     <Compile Include="DataLayer\Exam\ExamAssignment.cs" />
+    <Compile Include="DataLayer\Exam\ExamAssignmentHelper.cs" />
     <Compile Include="DataLayer\Exam\ExamAssignO.cs" />
     <Compile Include="DataLayer\Exam\ExamAttempDetails.cs" />
-    <Compile Include="DataLayer\Exam\ExamAttempt.cs" />
+    <Compile Include="DataLayer\Exam\ExamAttemptD.cs" />
     <Compile Include="DataLayer\Exam\ExamHelper.cs" />
     <Compile Include="DataLayer\Grade\GradeHelper.cs" />
     <Compile Include="DataLayer\Question\QuestionInfo.cs" />

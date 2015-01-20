@@ -1,5 +1,6 @@
 ﻿using ExaminerProLib.DataLayer.Exam;
 using ExaminerProLib.DataLayer.Question;
+using ExaminerProLib.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -278,8 +279,22 @@ namespace Examiner_Pro.Examiner.GUI.Exams.Attempt
             }
             else
             {
-                //Save to database the attempt.
+                ExamAttemptD attempt = new ExamAttemptD();
+                attempt.ExamId = _exam.Id;
+                attempt.GradeId = _exam.GradeId;
+                attempt.StudentId = SessionUtil.StudentId;
+                attempt.Status = AttemptStatus.Finished;
 
+
+                //Save to database the attempt.
+                if (ExamAssignmentHelper.SaveAttempt(_profile, ref attempt))
+                {
+                    this.DialogResult = true;
+                }
+                else
+                {
+                    this.DialogResult = false;
+                }
             }
         }
 

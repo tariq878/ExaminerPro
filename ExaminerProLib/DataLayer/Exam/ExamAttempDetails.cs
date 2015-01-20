@@ -14,6 +14,5 @@ namespace ExaminerProLib.DataLayer.Exam
         public int QuestionId { get; set; }
         public QuestionStatus Status { get; set; }
 
-
     }
 }
