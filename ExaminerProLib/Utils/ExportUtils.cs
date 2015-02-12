@@ -100,5 +100,15 @@ namespace ExaminerProLib.Utils
 
             return profile;
         }
+
+        public static List<DataLayer.Users.User> ImportUsers(string filename)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static void ExperortUsers(List<DataLayer.Users.User> _user)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

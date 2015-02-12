@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Examiner_Pro.Examiner.GUI.Users.UserCreate"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="UserCreate" Height="330" Width="400">
+        Title="UserCreate" Height="400" Width="500">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30*" />
@@ -21,7 +21,7 @@
                 <ColumnDefinition Width="35*" />
                 <ColumnDefinition Width="50*" />
             </Grid.ColumnDefinitions>
-            <TextBlock Height="20"  HorizontalAlignment="Left" Margin="67,0,0,0" x:Name ="errormessage" VerticalAlignment="Top" Width="247"  OpacityMask="Crimson" Foreground="#FFE5572C" />
+            <TextBlock Height="20"  HorizontalAlignment="Left" Margin="67,0,0,0" x:Name ="errormessage" VerticalAlignment="Top" Width="320"  OpacityMask="Crimson" Foreground="#FFE5572C" />
             <TextBox Grid.Row="1" Grid.Column="1" Name="txtUserName" Margin="3,3,3,3"></TextBox>
             <PasswordBox Grid.Row="2" Grid.Column="1" Name="txtPassword" Margin="3,3,3,3"></PasswordBox>
             <PasswordBox Grid.Row="3" Grid.Column="1" Name="txtPasswordCoonfirm" Margin="3,3,3,3"></PasswordBox>

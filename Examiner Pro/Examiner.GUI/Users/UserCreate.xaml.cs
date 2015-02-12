@@ -40,6 +40,9 @@ namespace Examiner_Pro.Examiner.GUI.Users
 
             errormessage.Text = error;
 
+            if (errormessage.Text.Length > 0)
+                return;
+
             User user = new User();
             Roles roles = new Roles();
             user.Password = Security.GetHash(txtPassword.Password);
@@ -56,8 +59,20 @@ namespace Examiner_Pro.Examiner.GUI.Users
             user.Roles.Add(roles);
 
             //Create a User.
-            UserHelper helper = new UserHelper();
-            helper.CreateUser(user);
+            if (UserHelper.UserExists(user))
+            {
+                MessageBox.Show("The user has already been added, please select a differnt userid");
+                return;
+            }
+
+            if (UserHelper.CreateUser(ref user))
+            {
+                MessageBox.Show("The user has been added successfully");
+            }
+            else
+            {
+                MessageBox.Show("The user could not added successfully");
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

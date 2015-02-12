@@ -11,11 +11,27 @@ namespace ExaminerProLib.DataLayer.Users
 {
     public class UserHelper
     {
-        private bool InsertUser(User user)
+        public static bool UserExists(User user)
         {
             try
             {
+                User userval = new User();
+                String query = "select * from users where username = \'" + user.UserName + "\'";
+                OleDbCommand myAccessCommand = new OleDbCommand(query, DatabaseController.Instance().Connection);
+                OleDbDataAdapter myDataAdapter = new OleDbDataAdapter(myAccessCommand);
 
+                DataSet myDataSet = new DataSet();
+                myDataAdapter.Fill(myDataSet, "users");
+
+                if (myDataSet.Tables["users"].Rows.Count < 1)
+                {
+                    Log.Instance.CreateEntry("user not found in database " + user.UserName);
+                    return false;
+                }
+
+                userval.UserName = (String)myDataSet.Tables["users"].Rows[0]["username"];
+                userval.ID = (int)myDataSet.Tables["users"].Rows[0]["ID"];
+                userval.Password = (String)myDataSet.Tables["users"].Rows[0]["password"];
 
                 return true;
             }
@@ -92,11 +108,11 @@ namespace ExaminerProLib.DataLayer.Users
 
         
 
-        public bool CreateUser(User user)
+        public static bool CreateUser(ref User user)
         {
             try
             {
-
+                //todo return back the inserted id.
                 using (OleDbDataAdapter da = new OleDbDataAdapter())
                 using (OleDbCommandBuilder bld = new OleDbCommandBuilder(da))
                 {
@@ -161,6 +177,90 @@ namespace ExaminerProLib.DataLayer.Users
                 Log.Instance.LogException(ex);
                 return "UNKNOWN";
             }
+        }
+
+        public static List<User> GetAllUsers()
+        {
+            List<User> students = new List<User>();
+            try
+            {
+                String query = "select * from   users;";
+                OleDbCommand myAccessCommand = new OleDbCommand(query, DatabaseController.Instance().Connection);
+                OleDbDataAdapter myDataAdapter = new OleDbDataAdapter(myAccessCommand);
+
+                DataSet myDataSet = new DataSet();
+                myDataAdapter.Fill(myDataSet, "users");
+
+                if (myDataSet.Tables["users"].Rows.Count < 1)
+                {
+                    return students;
+                }
+                else
+                {
+                    for (int i = 0; i < myDataSet.Tables["users"].Rows.Count; i++)
+                    {
+                        User user = new User();
+                        user.UserName = (String)myDataSet.Tables["users"].Rows[i]["username"];
+                        user.ID = (int)myDataSet.Tables["users"].Rows[i]["id"];
+                        user.Password = (String)myDataSet.Tables["users"].Rows[i]["password"];
+                        user.Roles = GetUserRoles(user);
+                        students.Add(user);
+
+                    }
+                }
+
+                return students;
+            }
+            catch (Exception ex)
+            {
+                Log.Instance.LogException(ex);
+                return null;
+            }
+
+
+        }
+
+        private static List<Roles> GetUserRoles(User userI)
+        {
+            List<Roles> roles = new List<Roles>();
+            try
+            {
+                String query = "select * from userroles,roles where userroles.roleid = roles.id and userroles.userid ="+ userI.ID +";";
+                OleDbCommand myAccessCommand = new OleDbCommand(query, DatabaseController.Instance().Connection);
+                OleDbDataAdapter myDataAdapter = new OleDbDataAdapter(myAccessCommand);
+
+                DataSet myDataSet = new DataSet();
+                myDataAdapter.Fill(myDataSet);
+
+                if (myDataSet.Tables["roles"].Rows.Count < 1)
+                {
+                    return roles;
+                }
+                else
+                {
+                    for (int i = 0; i < myDataSet.Tables["roles"].Rows.Count; i++)
+                    {
+                        Roles role = new Roles();
+                        role.ID = (int)myDataSet.Tables["roles"].Rows[i]["roleid"];
+                        role.Description = (String)myDataSet.Tables["roles"].Rows[i]["description"];
+                        roles.Add(role);
+
+                    }
+                }
+
+                return roles;
+            }
+            catch (Exception ex)
+            {
+                Log.Instance.LogException(ex);
+                return null;
+            }
+
+        }
+
+        public static bool DeleteUser(User user)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,6 +21,9 @@ namespace Examiner_Pro.Examiner.GUI
     /// </summary>
     public partial class LoginWindow : Window
     {
+        Main m;
+        private Timer t;
+
         public LoginWindow()
         {
             InitializeComponent();
@@ -51,7 +55,9 @@ namespace Examiner_Pro.Examiner.GUI
             user.UserName = textBoxFirstName.Text;
             if(helper.Login(user, passwordBox1.Password))
             {
-                this.DialogResult = true;
+                m = new Main(); // Creates but wont show
+
+                t = new Timer(new TimerCallback(CloseWindow), null, new TimeSpan(0, 0, 1), new TimeSpan(0, 0, 0, 0, -1));
             }
             else 
             {
@@ -79,5 +85,12 @@ namespace Examiner_Pro.Examiner.GUI
                 txtPasswordPopup.IsOpen = false;
             }
         }
+
+
+        private void CloseWindow(object info)
+        {
+            this.Dispatcher.Invoke((Action)(() => { m.Show(); Close(); }));
+        }
+
     }
 }

@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Examiner_Pro.Examiner.GUI.Main"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Main" Height="600" Width="600">
+        Title="Main" Height="600" Width="600" Loaded="Window_Loaded">
     <Grid>
         <DockPanel >
             <Menu DockPanel.Dock="Top">
@@ -33,7 +33,7 @@
                 </MenuItem>
             </Menu>
             
-            <StackPanel></StackPanel>
+            <StackPanel/>
         </DockPanel>
     </Grid>
 </Window>

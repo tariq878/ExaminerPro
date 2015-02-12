@@ -19,6 +19,7 @@ namespace Examiner_Pro
     /// </summary>
     public partial class App : Application
     {
+        /*
         public  void ApplicationStart(object sender, StartupEventArgs e)
         {
             Log.Instance.CreateEntry("----------------------------------------------");
@@ -49,5 +50,6 @@ namespace Examiner_Pro
                 Current.Shutdown(-1);
             }
         }
+         * */
     }
 }

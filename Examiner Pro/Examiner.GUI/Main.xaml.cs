@@ -25,6 +25,8 @@ namespace Examiner_Pro.Examiner.GUI
     {
         public Main()
         {
+           
+
             InitializeComponent();
         }
 
@@ -69,7 +71,8 @@ namespace Examiner_Pro.Examiner.GUI
         }
         private void Menu_userDelete(object sender, RoutedEventArgs e)
         {
-
+            UserManage userForm = new UserManage();
+            userForm.ShowDialog();
         }
         private void Menu_userReset(object sender, RoutedEventArgs e)
         {
@@ -107,6 +110,22 @@ namespace Examiner_Pro.Examiner.GUI
             dialog.ShowDialog();
         }
         #endregion
+
+        private void StackPanel_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //try doing a login window.
+            //LoginWindow login = new LoginWindow();
+
+            //while (!login.ShowDialog() == true)
+           // {
+
+           // }
+        }
 
     }
 }
