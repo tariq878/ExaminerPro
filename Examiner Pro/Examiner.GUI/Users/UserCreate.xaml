@@ -10,10 +10,10 @@
         <Image Grid.Row="0" Source="pack://siteoforigin:,,,/Media/education_banner.jpg" Stretch="Fill"/>
         <Grid Grid.Row="1" Height="180">
             <Grid.RowDefinitions>
-            <RowDefinition Height="15*" />
-            <RowDefinition Height="15*" />
-            <RowDefinition Height="15*" />
-            <RowDefinition Height="15*" />
+                <RowDefinition Height="15*" />
+                <RowDefinition Height="15*" />
+                <RowDefinition Height="15*" />
+                <RowDefinition Height="15*" />
                 <RowDefinition Height="15*" />
                 <RowDefinition Height="15*" />
             </Grid.RowDefinitions>
@@ -27,8 +27,8 @@
             <PasswordBox Grid.Row="3" Grid.Column="1" Name="txtPasswordCoonfirm" Margin="3,3,3,3"></PasswordBox>
             <CheckBox Name="chkTeacher"  Grid.Row="4" Grid.Column="1" Margin="3,3,3,3" Content="" VerticalAlignment="Center"></CheckBox>
             <Button Grid.Row="5" Grid.Column="0" Margin="3,3,3,3" Width="80" Content="Cancel" HorizontalAlignment="Right" Click="Button_Click_1"></Button>
-            <Button Grid.Row="5" Grid.Column="1" Margin="3,3,3,3" Width="80" Content="Create" HorizontalAlignment="Left" Click="Button_Click"></Button>
-            
+            <Button Grid.Row="5" Grid.Column="1" Margin="3,3,0,3" Width="80" Content="Create" HorizontalAlignment="Left" Click="Button_Click"/>
+
             <!-- Titles -->
             <TextBlock Grid.Row="1" Grid.Column="0"  Margin="3,3,3,3" Text="User Name:" HorizontalAlignment="Right" ></TextBlock>
             <TextBlock Grid.Row="2" Grid.Column="0"  Margin="3,3,3,3" Text="Password:" HorizontalAlignment="Right" ></TextBlock>

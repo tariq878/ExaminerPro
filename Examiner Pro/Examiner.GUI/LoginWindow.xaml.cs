@@ -1,4 +1,5 @@
-﻿using ExaminerProLib.DataLayer.Users;
+﻿using ExaminerProLib.DataLayer.Student;
+using ExaminerProLib.DataLayer.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,7 +43,6 @@ namespace Examiner_Pro.Examiner.GUI
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.DialogResult = false;
             this.Close();
         }
 
@@ -92,5 +92,62 @@ namespace Examiner_Pro.Examiner.GUI
             this.Dispatcher.Invoke((Action)(() => { m.Show(); Close(); }));
         }
 
+        #region Login as Student
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.errormessage1.Text = "";
+
+
+            if (ValidateStudent())
+            {
+                StudentO student = new StudentO();
+
+
+                student.RegNumber = Int32.Parse(txtStudentId.Text);
+
+                if (StudentHelper.StudentExists(ref student))
+                {
+                    m = new Main(); // Creates but wont show
+
+                    t = new Timer(new TimerCallback(CloseWindow), null, new TimeSpan(0, 0, 1), new TimeSpan(0, 0, 0, 0, -1));
+
+                }
+                else
+                {
+                    errormessage1.Text = "The student registration number does not exist!";
+                }
+            }
+            
+        }
+
+        private bool ValidateStudent()
+        {
+            errormessage1.Text = "";
+            if (txtStudentId.Text.Length == 0)
+            {
+                errormessage1.Text += "Please enter a valid student registration number!";
+            } else {
+
+                try
+                {
+                    int test = Int32.Parse(txtStudentId.Text);
+                }
+                catch (Exception ex)
+                {
+                    errormessage1.Text += "Registration number must be in numeric form!";
+                }
+
+            }
+
+            return (this.errormessage1.Text.Length == 0);
+        }
+
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
     }
 }

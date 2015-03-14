@@ -116,3 +116,59 @@ R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Deb
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Splash.g.cs
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Users\UserManage.baml
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Users\UserManage.g.cs
+E:\src\ExaminerPro\Examiner Pro\bin\Debug\Examiner Pro.exe.config
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro.exe
+E:\src\ExaminerPro\Examiner Pro\bin\Debug\Media\education_banner.jpg
+E:\src\ExaminerPro\Examiner Pro\bin\Debug\Media\drawing.ico
+E:\src\ExaminerPro\Examiner Pro\bin\Debug\Examiner Pro.exe
+E:\src\ExaminerPro\Examiner Pro\bin\Debug\Examiner Pro.pdb
+E:\src\ExaminerPro\Examiner Pro\bin\Debug\AvalonWizard.dll
+E:\src\ExaminerPro\Examiner Pro\bin\Debug\ExaminerProLib.dll
+E:\src\ExaminerPro\Examiner Pro\bin\Debug\ExaminerProLib.pdb
+E:\src\ExaminerPro\Examiner Pro\bin\Debug\AvalonWizard.pdb
+E:\src\ExaminerPro\Examiner Pro\bin\Debug\AvalonWizard.xml
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro.csprojResolveAssemblyReference.cache
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\Attempt\ExamAttempt.baml
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\ExamAssign.baml
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\ExamAssignManage.baml
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\ExamCreate.baml
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\ExamList.baml
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\ExamManage.baml
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\LoginWindow.baml
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Main.baml
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Question\AddWizard\QuestionAddPage1.baml
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Question\AddWizard\QuestionAddPage2.baml
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Question\QuestionAdd.baml
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Question\QuestionManage.baml
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Student\StudentEnrol.baml
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Student\StudentManage.baml
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Users\UserCreate.baml
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Users\UserManage.baml
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\resource.baml
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Splash.baml
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\App.baml
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\Attempt\ExamAttempt.g.cs
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\ExamAssign.g.cs
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\ExamAssignManage.g.cs
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\ExamCreate.g.cs
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\ExamList.g.cs
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Exams\ExamManage.g.cs
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\LoginWindow.g.cs
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Main.g.cs
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Question\AddWizard\QuestionAddPage1.g.cs
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Question\AddWizard\QuestionAddPage2.g.cs
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Question\QuestionAdd.g.cs
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Question\QuestionManage.g.cs
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Student\StudentEnrol.g.cs
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Student\StudentManage.g.cs
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Users\UserCreate.g.cs
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner.GUI\Users\UserManage.g.cs
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Splash.g.cs
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\App.g.cs
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro_Content.g.cs
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro_MarkupCompile.cache
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro.g.resources
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner_Pro.Properties.Resources.resources
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner_Pro.Resource1.resources
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro.csproj.GenerateResource.Cache
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro.pdb

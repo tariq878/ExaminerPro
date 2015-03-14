@@ -8,3 +8,8 @@ R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\ExaminerProLib\bin\D
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\ExaminerProLib\obj\Debug\ExaminerProLib.dll
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\ExaminerProLib\obj\Debug\ExaminerProLib.pdb
 R:\01 - Data\01 - Tariq\Develop\C#\Examiner Pro\ExaminerPro\ExaminerProLib\obj\Debug\ExaminerProLib.csprojResolveAssemblyReference.cache
+E:\src\ExaminerPro\ExaminerProLib\bin\Debug\ExaminerProLib.dll
+E:\src\ExaminerPro\ExaminerProLib\bin\Debug\ExaminerProLib.pdb
+E:\src\ExaminerPro\ExaminerProLib\obj\Debug\ExaminerProLib.csprojResolveAssemblyReference.cache
+E:\src\ExaminerPro\ExaminerProLib\obj\Debug\ExaminerProLib.dll
+E:\src\ExaminerPro\ExaminerProLib\obj\Debug\ExaminerProLib.pdb

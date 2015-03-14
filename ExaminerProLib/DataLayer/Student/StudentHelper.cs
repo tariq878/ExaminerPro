@@ -16,7 +16,7 @@ namespace ExaminerProLib.DataLayer.Student
         {
             try
             {
-                String query = "select * from   student where regnumber = " + student.RegNumber + ";";
+                String query = "select * from   student where regnum = " + student.RegNumber + ";";
                 OleDbCommand myAccessCommand = new OleDbCommand(query, DatabaseController.Instance().Connection);
                 OleDbDataAdapter myDataAdapter = new OleDbDataAdapter(myAccessCommand);
 
