@@ -18,7 +18,7 @@
             </Grid>
             <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal"  Margin="0,5,5,5" HorizontalAlignment="Right">
                 <Button Margin="3,0,0,3" Width="80" Content="Cancel"  Click="Button_Cancel_Click" VerticalAlignment="Top" ></Button>
-                <Button Margin="3,0,0,3" Width="80" Content="Add" Click="Button_Next_Click"  VerticalAlignment="Top" ></Button>
+                <Button Margin="3,0,0,10" Width="80" Content="Add" Click="Button_Next_Click"  VerticalAlignment="Bottom" ></Button>
             </StackPanel>
         </Grid>
     </Grid>

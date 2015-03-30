@@ -40,6 +40,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -57,6 +59,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Dummy.xaml.cs">
+      <DependentUpon>Dummy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Examiner.GUI\AboutExaminerPro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examiner.GUI\AboutExaminerPro.Designer.cs">
+      <DependentUpon>AboutExaminerPro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Examiner.GUI\Exams\Attempt\ExamAttempt.xaml.cs">
       <DependentUpon>ExamAttempt.xaml</DependentUpon>
     </Compile>
@@ -114,6 +125,10 @@
     <Compile Include="Splash.xaml.cs">
       <DependentUpon>Splash.xaml</DependentUpon>
     </Compile>
+    <Page Include="Dummy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Examiner.GUI\Exams\Attempt\ExamAttempt.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -205,6 +220,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Examiner.GUI\AboutExaminerPro.resx">
+      <DependentUpon>AboutExaminerPro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

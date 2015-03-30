@@ -122,13 +122,14 @@ namespace Examiner_Pro.Examiner.GUI.Question.AddWizard
 
             for (int i = 0; i < _question.NumOptions ; i++)
             {
-                CheckBox btnRadio = new CheckBox();
-                Grid.SetRow(btnRadio, i);
-                Grid.SetColumn(btnRadio, 0);
-                btnRadio.Margin = new Thickness(3, 3, 3, 3);
-                btnRadio.Name = "chk" + i.ToString();
-                this.RegisterName(btnRadio.Name, btnRadio);
-                gridContent.Children.Add(btnRadio);
+                CheckBox btnCheckBox = new CheckBox();
+                Grid.SetRow(btnCheckBox, i);
+                Grid.SetColumn(btnCheckBox, 0);
+                btnCheckBox.Margin = new Thickness(3, 3, 3, 3);
+                btnCheckBox.Content = "";
+                btnCheckBox.Name = "chk" + i.ToString();
+                this.RegisterName(btnCheckBox.Name, btnCheckBox);
+                gridContent.Children.Add(btnCheckBox);
 
                 //Add text box.
                 TextBox txtBox = new TextBox();

@@ -253,7 +253,15 @@ namespace ExaminerProLib.DataLayer.Question
                          }
                          question.ID = (int)myDataSet.Tables["question"].Rows[i]["id"];
                          question.Type = (QuestionType)myDataSet.Tables["question"].Rows[i]["type"];
-                         question.QuestionText = (string)myDataSet.Tables["question"].Rows[i]["questiontext"];
+                         if (Convert.IsDBNull(myDataSet.Tables["question"].Rows[i]["questiontext"]))
+                         {
+                             question.QuestionText="";
+                         }
+                         else
+                         {
+                             question.QuestionText = (string)myDataSet.Tables["question"].Rows[i]["questiontext"];
+                         }
+                         
                          question.Questions = GetQuestionOptions(question);
                          questions.Add(question);
 

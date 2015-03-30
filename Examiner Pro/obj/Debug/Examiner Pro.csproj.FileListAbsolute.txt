@@ -172,3 +172,6 @@ E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner_Pro.Properties.Resources.reso
 E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner_Pro.Resource1.resources
 E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro.csproj.GenerateResource.Cache
 E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner Pro.pdb
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Examiner_Pro.Examiner.GUI.AboutExaminerPro.resources
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Dummy.baml
+E:\src\ExaminerPro\Examiner Pro\obj\Debug\Dummy.g.cs

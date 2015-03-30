@@ -102,7 +102,7 @@ namespace Examiner_Pro.Examiner.GUI
             if (ValidateStudent())
             {
                 StudentO student = new StudentO();
-
+                    
 
                 student.RegNumber = Int32.Parse(txtStudentId.Text);
 

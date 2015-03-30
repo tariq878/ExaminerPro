@@ -127,5 +127,17 @@ namespace Examiner_Pro.Examiner.GUI
            // }
         }
 
+        private void Menu_FileExit(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Menu_FileAbout(object sender, RoutedEventArgs e)
+        {
+            //Show About Dialog.
+            AboutExaminerPro about = new AboutExaminerPro();
+            about.ShowDialog();
+        }
+
     }
 }
