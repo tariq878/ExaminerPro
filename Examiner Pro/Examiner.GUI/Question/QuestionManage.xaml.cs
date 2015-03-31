@@ -47,7 +47,9 @@ namespace Examiner_Pro.Examiner.GUI.Question
         {
             try
             {
+                lvQuestions.UnselectAll();
                 lvQuestions.Items.Clear();
+
                 questions = QuestionHelper.GetAllQuestions();
 
                 foreach (QuestionProfile profile in questions)
@@ -59,7 +61,7 @@ namespace Examiner_Pro.Examiner.GUI.Question
             catch (Exception ex)
             {
                 Log.Instance.LogException(ex);
-                MessageBox.Show("Could not load all the quesitons, please fix the error and retry !");
+                //MessageBox.Show("Could not load all the quesitons, please fix the error and retry !");
                 //this.Close();
             }
         }

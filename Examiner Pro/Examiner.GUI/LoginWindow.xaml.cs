@@ -1,5 +1,6 @@
 ﻿using ExaminerProLib.DataLayer.Student;
 using ExaminerProLib.DataLayer.Users;
+using ExaminerProLib.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,9 +54,13 @@ namespace Examiner_Pro.Examiner.GUI
             UserHelper helper = new UserHelper();
             User user = new User();
             user.UserName = textBoxFirstName.Text;
-            if(helper.Login(user, passwordBox1.Password))
+            if(helper.Login(ref user, passwordBox1.Password))
             {
                 m = new Main(); // Creates but wont show
+
+                //Set the username to the main controller of the applicaiton.
+                SessionUtil.IsStudent = false;
+                SessionUtil.UserId = user.ID;
 
                 t = new Timer(new TimerCallback(CloseWindow), null, new TimeSpan(0, 0, 1), new TimeSpan(0, 0, 0, 0, -1));
             }
@@ -110,6 +115,8 @@ namespace Examiner_Pro.Examiner.GUI
                 {
                     m = new Main(); // Creates but wont show
 
+                    SessionUtil.IsStudent = true;
+                    SessionUtil.StudentId = student.RegNumber;
                     t = new Timer(new TimerCallback(CloseWindow), null, new TimeSpan(0, 0, 1), new TimeSpan(0, 0, 0, 0, -1));
 
                 }

@@ -1,4 +1,5 @@
 ﻿using Examiner_Pro.Examiner.GUI.Exams;
+using Examiner_Pro.Examiner.GUI.Exams.Attempt;
 using Examiner_Pro.Examiner.GUI.Question;
 using Examiner_Pro.Examiner.GUI.Users;
 using ExaminerProLib.Utils;
@@ -25,9 +26,24 @@ namespace Examiner_Pro.Examiner.GUI
     {
         public Main()
         {
-           
+           InitializeComponent();
+           EnableMenus();
+        }
 
-            InitializeComponent();
+        private void EnableMenus()
+        {
+            if (SessionUtil.IsStudent)
+            {
+                mnuAttempt.IsEnabled = true;
+                mnuExams.IsEnabled = false;
+                mnuFile.IsEnabled = false;
+                mnuQuestion.IsEnabled = false;
+            }
+            else
+            {
+
+
+            }
         }
 
         #region Exams
@@ -48,14 +64,14 @@ namespace Examiner_Pro.Examiner.GUI
         private void Menu_ExamAssign(object sender, RoutedEventArgs e)
         {
             Log.Instance.CreateEntry("Starting the main windoiw");
-            ExamManage dialog = new ExamManage();
+            ExamAssign dialog = new ExamAssign();
             dialog.ShowDialog();
         }
 
         private void Menu_ExamDeassign(object sender, RoutedEventArgs e)
         {
             Log.Instance.CreateEntry("Starting the main windoiw");
-            ExamManage dialog = new ExamManage();
+            ExamAssignManage dialog = new ExamAssignManage();
             dialog.ShowDialog();
         }
 
@@ -118,13 +134,7 @@ namespace Examiner_Pro.Examiner.GUI
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //try doing a login window.
-            //LoginWindow login = new LoginWindow();
-
-            //while (!login.ShowDialog() == true)
-           // {
-
-           // }
+            
         }
 
         private void Menu_FileExit(object sender, RoutedEventArgs e)
@@ -137,6 +147,12 @@ namespace Examiner_Pro.Examiner.GUI
             //Show About Dialog.
             AboutExaminerPro about = new AboutExaminerPro();
             about.ShowDialog();
+        }
+
+        private void Menu_ExamAttempt(object sender, RoutedEventArgs e)
+        {
+            ExamList dialog = new ExamList();
+            dialog.ShowDialog();
         }
 
     }

@@ -11,5 +11,8 @@ namespace ExaminerProLib.Utils
         public static int UserId { get; set; }
 
         public static int StudentId { get; set; }
+
+        public static bool IsStudent { get; set; }
+
     }
 }

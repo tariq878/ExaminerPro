@@ -78,7 +78,7 @@ namespace ExaminerProLib.DataLayer.Users
 
         }
 
-        public bool Login(User user, string password)
+        public bool Login(ref User user, string password)
         {
             try
             {
@@ -89,9 +89,10 @@ namespace ExaminerProLib.DataLayer.Users
                     return false;
                 }
 
+                user.ID = userDB.ID;
                 string hashedpassword = Security.GetHash(password);
                 
-                if (userDB.Password == hashedpassword)
+                if (userDB.Password == hashedpassword) 
                     return true;
                 else
                     return false;
@@ -105,8 +106,6 @@ namespace ExaminerProLib.DataLayer.Users
 
         }
 
-
-        
 
         public static bool CreateUser(ref User user)
         {
