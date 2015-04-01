@@ -38,10 +38,19 @@ namespace Examiner_Pro.Examiner.GUI
                 mnuExams.IsEnabled = false;
                 mnuFile.IsEnabled = false;
                 mnuQuestion.IsEnabled = false;
+                mnuSettings.IsEnabled = false;
+                mnuStudent.IsEnabled = false;
+                mnuUsers.IsEnabled = false;
             }
             else
             {
-
+                mnuAttempt.IsEnabled = false;
+                mnuExams.IsEnabled = true;
+                mnuFile.IsEnabled = true;
+                mnuQuestion.IsEnabled = true;
+                mnuSettings.IsEnabled = false;
+                mnuStudent.IsEnabled = true;
+                mnuUsers.IsEnabled = true;
 
             }
         }
